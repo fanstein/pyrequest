@@ -3,7 +3,9 @@
         "url":"https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=zh-CN&hl=zh-CN&dt=t&dt=bd&dj=1&source=bubble&tk=364571.364571&q=http",
         "method":"get",
         "body":"",
-        "param":""
+        "param":{
+            "":[]
+        }
     },
     "assert":{
         "path":"",
@@ -12,7 +14,6 @@
     "ddt":{
     },
     "mock":{
-
     },
     "performance":{
         "threads":5,

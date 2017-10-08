@@ -764,14 +764,14 @@ class HTMLTestRunner(Template_mixin):
         # o and e should be byte string because they are collected from stdout and stderr?
         if isinstance(o,str):
             # TODO: some problem with 'string_escape': it escape \n and mess up formating
-            # uo = unicode(o.encode('string_escape'))
-            uo = o
+            uo = unicode(o.encode('string_escape'))
+            # uo = o
         else:
             uo = o
         if isinstance(e,str):
             # TODO: some problem with 'string_escape': it escape \n and mess up formating
-            # ue = unicode(e.encode('string_escape'))
-            ue = e
+            ue = unicode(e.encode('string_escape'))
+            # ue = e
         else:
             ue = e
 

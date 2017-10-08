@@ -1,0 +1,21 @@
+{
+    "request":{
+        "base_url":"http://127.0.0.1:8000/api/get_guest_list/",
+        "method":"get",
+        "body":"",
+        "param":""
+    },
+    "assert":{
+        "path":""
+    },
+    "ddt":{
+
+    },
+    "mock":{
+
+    },
+    "performance":{
+        "thread":5,
+        "time":600
+    }
+}
