@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0816c51-de2f-4e27-a820-08bc7ba8aa3f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/base.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/base/requests_base.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db_fixture/need_test" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interface/MTest_Plantform.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interface/test_2.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model_script/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model_script/model1_test.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/2017-10-04 16_02_03_result.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/report/2017-10-04 17_02_33_result.html" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/model_script/model2_test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HTMLTestRunner.py" afterPath="$PROJECT_DIR$/HTMLTestRunner.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interface/test_1.json" afterPath="$PROJECT_DIR$/interface/test_1.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mock_train/mock_train1.py" afterPath="$PROJECT_DIR$/mock_train/mock_train1.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run_tests.py" afterPath="$PROJECT_DIR$/run_tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/temp/add_event_test.py" afterPath="$PROJECT_DIR$/temp/add_event_test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interface/test_2.json" afterPath="$PROJECT_DIR$/interface/test_2.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,18 +32,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mysql_db.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db_fixture/mysql_db.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="65" column="8" lean-forward="false" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="8" />
-              <folding>
-                <element signature="e#14#36#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="need_test" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db_fixture/need_test">
           <provider selected="true" editor-type-id="text-editor">
@@ -67,11 +42,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_2.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test_2.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interface/test_2.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+            <state relative-caret-position="200">
+              <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="model2_test.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/model_script/model2_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -261,6 +246,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/model_script" />
       <recent name="$PROJECT_DIR$/interface" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -775,8 +761,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/interface/test_2.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        <state relative-caret-position="200">
+          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model_script/model2_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
