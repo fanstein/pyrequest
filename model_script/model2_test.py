@@ -1,12 +1,12 @@
 # coding=utf8
 import sys, os
 import unittest
-
-parentdir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, parentdir)
 import mock
 import ddt
 from base import base, requests_base
+
+parentdir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, parentdir)
 
 file_name = base.Base.read_test()
 
