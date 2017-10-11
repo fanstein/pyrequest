@@ -1,0 +1,12 @@
+1、接口测试和性能测试一体（locust）
+2、有前端
+3、暂时单接口
+4、request和unittest
+6、接口报文地址可以是postman
+5、结果报错（后续）
+6、mock服务
+7、代理和转发
+
+test case、test suit、test runner、test fixture
+testcase:测试用例，testsetup,run,teardown
+多个testcase在一起就是testsuit、testsuit可以嵌套testsuit
