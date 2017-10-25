@@ -1,6 +1,7 @@
 # coding=utf8
 import sys, os
 import unittest
+import ast
 
 parentdir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, parentdir)
@@ -19,10 +20,10 @@ class ModelTest(unittest.TestCase):
     def tearDown(self):
         pass
 
+
     @ddt.data(*file_name)
     def test_model(self, filename):
         response = ""
-        # print "start"
         fname = parentdir + "/interface/" + filename
         base_ = base.Base()
         temp_json = base_.load(fname)
@@ -30,11 +31,10 @@ class ModelTest(unittest.TestCase):
         if temp_json["request"]["method"].lower() == "get":
             url = temp_json["request"]["url"]
             response = requests_base.RequestBase.request_get(url)
-            # print response.text
         if temp_json["request"]["method"].lower() == "post":
             url = temp_json["request"]["url"]
-            querystring = temp_json["request"]["querystring"]
-            headers = temp_json["request"]["headers"]
+            querystring = temp_json["request"]["body"]
+            headers = ast.literal_eval(temp_json["request"]["headers"])
             response = requests_base.RequestBase. \
                 request_post(url=url, querystring=querystring, headers=headers)
         self.assertIn(assert_string, response.text)

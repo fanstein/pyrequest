@@ -22,7 +22,6 @@ class ModelTest(unittest.TestCase):
     @ddt.data(*file_name)
     def test_model(self, filename):
         response = ""
-        # print "start"
         fname = parentdir + "/interface/" + filename
         base_ = base.Base()
         temp_json = base_.load(fname)
@@ -30,7 +29,6 @@ class ModelTest(unittest.TestCase):
         if temp_json["request"]["method"].lower() == "get":
             url = temp_json["request"]["url"]
             response = requests_base.RequestBase.request_get(url)
-            # print response.text
         if temp_json["request"]["method"].lower() == "post":
             url = temp_json["request"]["url"]
             querystring = temp_json["request"]["querystring"]
