@@ -30,8 +30,9 @@ import re
 # f1.to_csv("test.csv", index=False, sep=',')
 # print f1
 
+#
+# t = '0:00:01.171010'
+# x = re.split(':|\.',t)
+# time_stamp = (int(x[0])*60*60+int(x[1])*60+int(x[2])+float('0.'+x[3]))*1000
+# print time_stamp
 
-t = '0:00:01.171010'
-x = re.split(':|\.',t)
-time_stamp = (int(x[0])*60*60+int(x[1])*60+int(x[2])+float('0.'+x[3]))*1000
-print time_stamp

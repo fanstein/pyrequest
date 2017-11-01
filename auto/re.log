@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<sample t="500" it="0" lt="0" ct="0" ts="1509523626875" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523627373" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523627391" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523627875" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523628392" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523628876" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523628893" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523629377" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523629893" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523630378" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523630394" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523630879" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523631395" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523631880" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523631896" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523632380" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523632897" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523633381" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523633399" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523633881" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523634399" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523634881" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523634899" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523635381" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523635899" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523636381" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523636399" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523636881" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523637399" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523637882" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523637899" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523638382" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523638899" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523639382" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523639399" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523639882" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523640399" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523640883" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523640899" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523641383" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523641899" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523642384" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523642399" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523642885" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523643400" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523643885" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523643900" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523644386" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="501" it="0" lt="0" ct="0" ts="1509523644900" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523645386" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523645401" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523645887" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523646401" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523646887" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523646902" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523647387" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523647902" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="501" it="0" lt="0" ct="0" ts="1509523648387" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523648402" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523648888" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="499" it="0" lt="0" ct="0" ts="1509523649403" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="499" it="0" lt="0" ct="0" ts="1509523649888" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523649903" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523650388" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523650903" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="499" it="0" lt="0" ct="0" ts="1509523651388" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523651404" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523651888" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="499" it="0" lt="0" ct="0" ts="1509523652404" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="499" it="0" lt="0" ct="0" ts="1509523652888" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523652904" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523653388" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523653904" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523654388" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523654404" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523654888" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="499" it="0" lt="0" ct="0" ts="1509523655404" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="499" it="0" lt="0" ct="0" ts="1509523655888" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523655904" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523656388" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523656905" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523657388" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523657405" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523657888" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523658406" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="499" it="0" lt="0" ct="0" ts="1509523658889" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523658906" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523659389" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="499" it="0" lt="0" ct="0" ts="1509523659906" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="499" it="0" lt="0" ct="0" ts="1509523660389" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523660406" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523660889" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="499" it="0" lt="0" ct="0" ts="1509523661406" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="499" it="0" lt="0" ct="0" ts="1509523661889" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523661906" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523662389" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523662906" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523663389" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523663408" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523663891" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523664408" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="501" it="0" lt="0" ct="0" ts="1509523664891" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1001" it="0" lt="0" ct="0" ts="1509523664909" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523665392" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523665911" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523666392" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523666412" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523666893" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="499" it="0" lt="0" ct="0" ts="1509523667412" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="499" it="0" lt="0" ct="0" ts="1509523667893" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523667912" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523668393" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523668912" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="499" it="0" lt="0" ct="0" ts="1509523669393" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523669413" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523669893" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="499" it="0" lt="0" ct="0" ts="1509523670413" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="499" it="0" lt="0" ct="0" ts="1509523670893" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523670913" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523671393" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523671913" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="499" it="0" lt="0" ct="0" ts="1509523672393" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523672415" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523672893" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="499" it="0" lt="0" ct="0" ts="1509523673416" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="499" it="0" lt="0" ct="0" ts="1509523673893" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523673916" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523674393" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="499" it="0" lt="0" ct="0" ts="1509523674916" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="499" it="0" lt="0" ct="0" ts="1509523675393" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523675416" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523675893" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="499" it="0" lt="0" ct="0" ts="1509523676416" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="499" it="0" lt="0" ct="0" ts="1509523676893" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523676916" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523677393" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="499" it="0" lt="0" ct="0" ts="1509523677916" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="499" it="0" lt="0" ct="0" ts="1509523678393" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523678416" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523678893" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="499" it="0" lt="0" ct="0" ts="1509523679416" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523679893" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="1000" it="0" lt="0" ct="0" ts="1509523679916" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523680394" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523680917" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="499" it="0" lt="0" ct="0" ts="1509523681394" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523681418" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523681894" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="499" it="0" lt="0" ct="0" ts="1509523682418" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="499" it="0" lt="0" ct="0" ts="1509523682894" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523682918" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523683394" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="499" it="0" lt="0" ct="0" ts="1509523683918" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="500" it="0" lt="0" ct="0" ts="1509523684394" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523684418" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523684895" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="499" it="0" lt="0" ct="0" ts="1509523685418" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="499" it="0" lt="0" ct="0" ts="1509523685895" s="true" lb="sampler_2" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523685918" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-1" dt="text" by="114" sby="0" ng="2" na="2">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+<sample t="999" it="0" lt="0" ct="0" ts="1509523686395" s="true" lb="sampler_1" rc="200" rm="OK" tn="线程组 1-2" dt="text" by="114" sby="0" ng="1" na="1">
+  <samplerData class="java.lang.String">Dummy Sampler used to simulate requests and responses
+without actual network activity. This helps debugging tests.</samplerData>
+</sample>
+
+</testResults>
