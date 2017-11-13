@@ -17,10 +17,13 @@ import re
 
 # obj = Series([4, 7, -5, 3])
 # print obj.values
+# print obj.index
 # obj2 = Series([4, 7, -5, 3], index=['a','b','c','d'])
+# print obj2.index, obj2['a'], obj2[['a', 'b']]
+
 # print obj2[obj2 > 0]
 # print np.exp(obj2)
-obj = pd.read_csv("10-overall-summary.csv")
+
 # data = {'state': ['Ohio', 'Ohio', 'Ohio', 'Nevada', 'Nevada'],
 # 'year': [2000, 2001, 2002, 2001, 2002],
 # 'pop': [1.5, 1.7, 3.6, 2.4, 2.9]}
@@ -29,13 +32,29 @@ obj = pd.read_csv("10-overall-summary.csv")
 # print frame2
 # print frame2[frame2['year']>2001]
 # print obj
-print obj[obj["threadName"] == '线程组 1-3'].elapsed.head(3)
-print obj[obj["threadName"] == '线程组 1-3'].elapsed.head(3).value_counts()
+# print obj[obj["threadName"] == '线程组 1-3'].elapsed.head(3)
+# print obj[obj["threadName"] == '线程组 1-3'].elapsed.head(3).value_counts()
 
-throughout = obj.groupby(obj["threadName"])['elapsed'].count()/obj.groupby(obj["threadName"])['elapsed'].mean()
+obj = pd.read_csv("10-overall-summary.csv")
+# throughout = obj.groupby(obj["threadName"])['elapsed'].count()/(obj.groupby(obj["threadName"])['elapsed'].mean()/1000)
+# throughout = throughout.to_frame()
+ela= obj.groupby(obj["threadName"])['elapsed']
+f = lambda x: x.count()/x.mean()*1000
+print ela.apply(f)
+# res = obj.groupby(obj["threadName"])['elapsed'].agg(['min', 'max', 'mean', 'count', ])
 
-re = obj.groupby(obj["threadName"])['elapsed'].agg(['min', 'max','mean','count'])
-print "ss:"
+# df = DataFrame(res, columns=['min', 'max', 'mean', 'count', 'throughout'])
+# print throughout
+# df['throughout'] = throughout
 
-print re
-print pd.merge(throughout,re)
+# df = pd.merge(res, throughout, left_on='threadName', right_index=True)
+# print df
+
+
+
+# pop = {'Nevada': {2001: 2.4, 2002: 2.9}, 'Ohio': {2000: 1.5, 2001: 1.7, 2002: 3.6}}
+# frame3 = DataFrame(pop)
+# print frame3
+# frame3.index.name = 'year'
+# frame3.columns.name = 'state'
+# print frame3.values

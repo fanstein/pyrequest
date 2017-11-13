@@ -14,7 +14,6 @@ import pandas as pd
 import time
 import re
 
-
 _this_dir = os.path.dirname(os.path.abspath(__file__))
 
 
@@ -45,53 +44,16 @@ def self_convert():
     for each in soup.find_all("sample"):
         print each["lb"]
 
+
 def csv_parse():
-    print pd.read_csv("10-over-summary.csv")
-
-
-
-def jtl_summary():
-    elapsed = {}
-    timestamps = {}
-    starttimes = {}
-    errors = {}
-    parser = create_parser('re.log')
-    for sample in parser.itersamples():
-        if (not sample.label in elapsed):
-            elapsed[sample.label] = []
-            timestamps[sample.label] = []
-            starttimes[sample.label] = []
-            errors[sample.label] = []
-
-        elapsed[sample.label].append(t2s(sample.elapsed_time))
-        timestamps[sample.label].append(str(sample.timestamp))
-        starttimes[sample.label].append(str(sample.timestamp - sample.elapsed_time))
-        if sample.success != True:
-            errors[sample.label].append(t2s(sample.elapsed_time))
-
-    for label in elapsed:
-        # Transform the lists for plotting
-        plot_data = []
-        throughput_data = [None]
-        error_x = []
-        error_y = []
-        plot_labels = []
-        column = 1
-        # for thread_count in na.sort(elapsed[label].keys()):
-        plot_data.append(elapsed[label])
-        test_start = min(starttimes[label])
-        test_end = max(timestamps[label])
-        test_length = (int(parse_time(test_end)) - int(parse_time(test_start))) / 1000
-        num_requests = len(timestamps[label]) - len(errors[label])
-        if (test_length > 0):
-            throughput_data.append(num_requests / float(test_length))
-        else:
-            throughput_data.append(0)
-        for error in errors[label]:
-            error_x.append(column)
-            error_y.append(error)
-        column += 1
-    print throughput_data
+    obj = pd.read_csv("10-overall-summary.csv")
+    elapse = obj.groupby(obj["label"])['elapsed']
+    l = lambda x: x.count() / x.mean() * 1000
+    throughout = elapse.apply(l)
+    result = elapse.agg(['min', 'max', 'mean', 'count'])
+    result = DataFrame(result, columns=['min', 'max', 'mean', 'count', 'throughout'])
+    result['throughout'] = throughout
+    w2e(result, 'result.xlsx', 'temp')
 
 
 def jtl_parse():
@@ -101,50 +63,49 @@ def jtl_parse():
     error_count = 0
     response = ''
     total = 0
+    threads = []
     lables = []
     parser = create_parser('re.log')
     for sample in parser.itersamples():
-        response_time.append({sample.label: t2s(str(sample.elapsed_time))})
-        # time_stamp.append(sample.timestamp)
+        response_time.append(t2s(str(sample.elapsed_time)))
+        # response_time.append({sample.label: t2s(str(sample.elapsed_time))})
+        time_stamp.append(str(sample.timestamp))
+        lables.append(sample.label)
         # error_count = error_count + sample.error_count
         # response = str(sample.timestamp) + ":" + sample.response_data + "\n"
         # total = total+1
         # print len(lables)
         # data[sample.label] = {"response_time": response_time}
-    # response_time_avg = make_avg(response_time)
-    # lables = list(set(lables))
-    print response_time
-
-
-    # df = pd.DataFrame({"response_time": response_time, "time_stamp": time_stamp},
-    #                      columns=["time_stamp", "response_time"])
+        threads.append(sample.group_threads)
+    data = {"response_time": response_time, "time_stamp": time_stamp, "lables": lables}
+    obj = pd.DataFrame(data)
+    thread = max(threads)
+    elapse = obj.groupby("lables")['response_time']
+    throughout = thread/elapse.mean()*1000
+    result = elapse.agg(['min', 'max', 'mean', 'count'])
+    result = DataFrame(result, columns=['min', 'max', 'mean', 'count', 'throughout'])
+    result['throughout'] = throughout
+    print result
     # w2e(df, "test.xlsx", u"明细")
-
-
-def make_avg(l):
-    num = len(l)
-    sum_l = sum(l)
-    avg = sum_l/num
-    return round(avg, 2)
 
 
 def w2e(df, excelFile, sheetName):
     xlsxwriter.Workbook(excelFile)
     # f.to_csv("test.csv", index="false") # 写入csv
     # writer = pd.ExcelWriter("test.xlsx", engine='xlsxwriter') # 写入xlsx,但是会覆盖
-    writer = pd.ExcelWriter(excelFile, engine='openpyxl') # 这个引擎不会覆盖
+    writer = pd.ExcelWriter(excelFile, engine='openpyxl')  # 这个引擎不会覆盖
     book = load_workbook(excelFile)
     writer.book = book
     writer.sheets = dict((ws.title, ws) for ws in book.worksheets)
     df.to_excel(writer, sheet_name=sheetName)
     writer.save()
 
+
 def parse_time(dt):
     # 转换成时间数组
     timeArray = time.strptime(dt, "%Y-%m-%d %H:%M:%S.%f")
     # 转换成时间戳
     timestamp = time.mktime(timeArray)
-
     return timestamp
 
 
@@ -156,13 +117,8 @@ def t2s(t):
         time_stamp = (int(x[0]) * 60 * 60 + int(x[1]) * 60 + int(x[2])) * 1000
     return time_stamp
 
+
 if __name__ == '__main__':
-    # jtl_parse()
+    jtl_parse()
     # jtl_summary()
-    # data = {"sample_1": {"response_time": [1, 2, 3], "time_stamp": 111}, "sample_2": {"response_time":13,"time_stamp":112}}
-    # data = {"sample_1": {"response_time": [1, 2, 3]}, "sample_2": {"response_time":[2,3,4]}}
-    data = {"response_time":[1, 2, 3], "lable":["11", "22", '33']}
-    # df = pd.DataFrame(data, index=["time_stamp", "response_time"], columns=["sample_1", "sample_2"]).T
-    df = pd.DataFrame(data)
-    print df
-    # w2e(df, "test.xlsx", u"明细")
+    # csv_parse()
