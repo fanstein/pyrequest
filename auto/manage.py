@@ -9,7 +9,7 @@ from xmlutils.xml2json import xml2json
 from jtl import create_parser
 from pandas import Series, DataFrame, ExcelWriter
 from openpyxl import load_workbook
-import numpy as na
+import numpy as np
 import pandas as pd
 import time
 import re
@@ -47,46 +47,40 @@ def self_convert():
 
 def csv_parse():
     obj = pd.read_csv("10-overall-summary.csv")
-    elapse = obj.groupby(obj["label"])['elapsed']
-    l = lambda x: x.count() / x.mean() * 1000
-    throughout = elapse.apply(l)
-    result = elapse.agg(['min', 'max', 'mean', 'count'])
+    obj['start_time'] = obj['timeStamp'] - obj['elapsed']
+    temp = obj.groupby(obj["label"])
+    test_time = (temp['timeStamp'].max() - temp['start_time'].min())/1000
+    throughout = temp['timeStamp'].count()/test_time
+    result = temp['elapsed'].agg(['min', 'max', 'mean', 'count'])
     result = DataFrame(result, columns=['min', 'max', 'mean', 'count', 'throughout'])
     result['throughout'] = throughout
     w2e(result, 'result.xlsx', 'temp')
 
 
 def jtl_parse():
-    data = {}
     response_time = []
     time_stamp = []
+    start_times = []
     error_count = 0
     response = ''
-    total = 0
     threads = []
     lables = []
-    parser = create_parser('re.log')
+    parser = create_parser('10-overall-summary.csv')
     for sample in parser.itersamples():
         response_time.append(t2s(str(sample.elapsed_time)))
-        # response_time.append({sample.label: t2s(str(sample.elapsed_time))})
-        time_stamp.append(str(sample.timestamp))
+        time_stamp.append(sample.timestamp)
         lables.append(sample.label)
-        # error_count = error_count + sample.error_count
-        # response = str(sample.timestamp) + ":" + sample.response_data + "\n"
-        # total = total+1
-        # print len(lables)
-        # data[sample.label] = {"response_time": response_time}
         threads.append(sample.group_threads)
-    data = {"response_time": response_time, "time_stamp": time_stamp, "lables": lables}
+        start_times.append(sample.timestamp - sample.elapsed_time)
+    data = {"response_time": response_time, "time_stamp": time_stamp, "lables": lables, "start_time": start_times}
     obj = pd.DataFrame(data)
-    thread = max(threads)
-    elapse = obj.groupby("lables")['response_time']
-    throughout = thread/elapse.mean()*1000
-    result = elapse.agg(['min', 'max', 'mean', 'count'])
+    temp = obj.groupby("lables")
+    test_time = temp['time_stamp'].max() - temp['start_time'].min()
+    throughout = temp['time_stamp'].count()/test_time.astype('timedelta64[ms]')*1000
+    result = temp['response_time'].agg(['min', 'max', 'mean', 'count'])
     result = DataFrame(result, columns=['min', 'max', 'mean', 'count', 'throughout'])
     result['throughout'] = throughout
     print result
-    # w2e(df, "test.xlsx", u"明细")
 
 
 def w2e(df, excelFile, sheetName):
@@ -103,7 +97,11 @@ def w2e(df, excelFile, sheetName):
 
 def parse_time(dt):
     # 转换成时间数组
-    timeArray = time.strptime(dt, "%Y-%m-%d %H:%M:%S.%f")
+    try :
+        dt.split('.')[1]
+        timeArray = time.strptime(dt, "%Y-%m-%d %H:%M:%S.%f")
+    except:
+        timeArray = time.strptime(dt, "%Y-%m-%d %H:%M:%S")
     # 转换成时间戳
     timestamp = time.mktime(timeArray)
     return timestamp
@@ -119,6 +117,7 @@ def t2s(t):
 
 
 if __name__ == '__main__':
-    jtl_parse()
+    # jtl_parse()
     # jtl_summary()
     # csv_parse()
+    analysis_result()
