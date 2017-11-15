@@ -35,12 +35,12 @@ import re
 # print obj[obj["threadName"] == '线程组 1-3'].elapsed.head(3)
 # print obj[obj["threadName"] == '线程组 1-3'].elapsed.head(3).value_counts()
 
-obj = pd.read_csv("10-overall-summary.csv")
-# throughout = obj.groupby(obj["threadName"])['elapsed'].count()/(obj.groupby(obj["threadName"])['elapsed'].mean()/1000)
-# throughout = throughout.to_frame()
-ela= obj.groupby(obj["threadName"])['elapsed']
-f = lambda x: x.count()/x.mean()*1000
-print ela.apply(f)
+# obj = pd.read_csv("10-overall-summary.csv")
+# # throughout = obj.groupby(obj["threadName"])['elapsed'].count()/(obj.groupby(obj["threadName"])['elapsed'].mean()/1000)
+# # throughout = throughout.to_frame()
+# ela= obj.groupby(obj["threadName"])['elapsed']
+# f = lambda x: x.count()/x.mean()*1000
+# print ela.apply(f)
 # res = obj.groupby(obj["threadName"])['elapsed'].agg(['min', 'max', 'mean', 'count', ])
 
 # df = DataFrame(res, columns=['min', 'max', 'mean', 'count', 'throughout'])
@@ -58,3 +58,24 @@ print ela.apply(f)
 # frame3.index.name = 'year'
 # frame3.columns.name = 'state'
 # print frame3.values
+# !/usr/bin/python
+# coding :utf-8
+from string import Template
+
+
+class MyTemplate(Template):
+    """docstring for MyTemplate"""
+    delimiter = '#'
+
+
+def _test():
+    s = '#who likes #what'
+    t = MyTemplate(s)
+    d = {'who': 'jianpx', 'what': 'mac'}
+    print t.substitute(d)
+    print MyTemplate.delimiter
+    print Template.delimiter
+
+
+if __name__ == '__main__':
+    _test()
