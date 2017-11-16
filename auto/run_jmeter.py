@@ -19,15 +19,15 @@ def getDateTime():
 
 
 def execcmd(command):
-    print "command" + command
+    print "command " + command
 
     output = subprocess.Popen(
         command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True,
         universal_newlines=True)
 
     stderrinfo, stdoutinfo = output.communicate()
-    print "stderrinfo" + stderrinfo
-    print "stdoutinfo" + stdoutinfo
+    print "stderrinfo " + stderrinfo
+    print "stdoutinfo " + stdoutinfo
     print "returncode={0}".format(output.returncode)
 
 
@@ -51,5 +51,5 @@ def execjmxs(Num_Threads, Loops):
     execcmd(execjmxouthtml)
 
 
-jobs = [dict(Num_Threads=x * 10, Loops=1000) for x in range(2, 21)]
+jobs = [dict(Num_Threads=x * 10, Loops=10) for x in range(2, 3)]
 [execjmxs(x["Num_Threads"], x["Loops"]) for x in jobs]
