@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0816c51-de2f-4e27-a820-08bc7ba8aa3f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/auto/T20XL100020171115205811.jmx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/auto/T20XL100020171115205855.jmx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/auto/result20171115205855.csv" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/auto/moniter/cpu_use.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/auto/moniter/cpuinfo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/auto/moniter/free" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/auto/moniter/mem_use.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/auto/moniter/mem_use_2.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/auto/moniter/moniter_cpu.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/auto/moniter/stat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auto/jmeter.log" afterPath="$PROJECT_DIR$/auto/jmeter.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auto/run_jmeter.py" afterPath="$PROJECT_DIR$/auto/run_jmeter.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,28 +21,30 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/pyrequest$Unittests_in_model_1_py.coverage" NAME="Unittests in model1_test.py Coverage Results" MODIFIED="1507430689545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model_script" />
-    <SUITE FILE_PATH="coverage/pyrequest$Unittests_for_model_1_ModelTest.coverage" NAME="Unittests for model_1.ModelTest Coverage Results" MODIFIED="1507428500876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model_script" />
     <SUITE FILE_PATH="coverage/pyrequest$manage.coverage" NAME="manage Coverage Results" MODIFIED="1510730843056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/auto" />
     <SUITE FILE_PATH="coverage/pyrequest$Unittests_for_mock_train1_TestCount_test_add.coverage" NAME="Unittests for mock_train1.TestCount.test_add Coverage Results" MODIFIED="1507212611068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mock_train" />
-    <SUITE FILE_PATH="coverage/pyrequest$base.coverage" NAME="base Coverage Results" MODIFIED="1507428389890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/base" />
-    <SUITE FILE_PATH="coverage/pyrequest$model_1.coverage" NAME="model_1 Coverage Results" MODIFIED="1507428868946" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model_script" />
-    <SUITE FILE_PATH="coverage/pyrequest$Unittests_in_mock_train1_py.coverage" NAME="Unittests in mock_train1.py Coverage Results" MODIFIED="1507212054461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mock_train" />
     <SUITE FILE_PATH="coverage/pyrequest$Unittests_for_first_test_FirstTest.coverage" NAME="Unittests for first_test.FirstTest Coverage Results" MODIFIED="1507189184706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface" />
     <SUITE FILE_PATH="coverage/pyrequest$Unittests_for_model_1_ModelTest_test_model1.coverage" NAME="Unittests for model_1.ModelTest.test_model1 Coverage Results" MODIFIED="1507387628641" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model_script" />
-    <SUITE FILE_PATH="coverage/pyrequest$Metal.coverage" NAME="Metal Coverage Results" MODIFIED="1510730866130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/auto" />
-    <SUITE FILE_PATH="coverage/pyrequest$proxy.coverage" NAME="proxy Coverage Results" MODIFIED="1507731685316" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/pyrequest$pd.coverage" NAME="pd Coverage Results" MODIFIED="1509450190632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/auto" />
+    <SUITE FILE_PATH="coverage/pyrequest$moniter_cpu.coverage" NAME="moniter_cpu Coverage Results" MODIFIED="1510902013756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/auto/moniter" />
     <SUITE FILE_PATH="coverage/pyrequest$temp.coverage" NAME="temp Coverage Results" MODIFIED="1510731725831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/auto" />
     <SUITE FILE_PATH="coverage/pyrequest$Unittests_for_mock_train1_TestCount.coverage" NAME="Unittests for mock_train1.TestCount Coverage Results" MODIFIED="1507212521776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mock_train" />
-    <SUITE FILE_PATH="coverage/pyrequest$run_tests.coverage" NAME="run_tests Coverage Results" MODIFIED="1508482553044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pyrequest$Unittests_for_model1_test_ModelTest.coverage" NAME="Unittests for model1_test.ModelTest Coverage Results" MODIFIED="1508494564134" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model_script" />
     <SUITE FILE_PATH="coverage/pyrequest$Unittests_for_model_1_ModelTest_test_model.coverage" NAME="Unittests for model_1.ModelTest.test_model Coverage Results" MODIFIED="1507429040188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model_script" />
     <SUITE FILE_PATH="coverage/pyrequest$1.coverage" NAME="1 Coverage Results" MODIFIED="1507730500306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/pyrequest$cpu_use.coverage" NAME="cpu_use Coverage Results" MODIFIED="1510906038503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/auto/moniter" />
     <SUITE FILE_PATH="coverage/pyrequest$Unittests_for_add_event_test_AddEventTest_test_add_event_success.coverage" NAME="Unittests for add_event_test.AddEventTest.test_add_event_success Coverage Results" MODIFIED="1507429023503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/temp" />
+    <SUITE FILE_PATH="coverage/pyrequest$Unittests_in_add_event_test_py.coverage" NAME="Unittests in add_event_test.py Coverage Results" MODIFIED="1507428963624" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/temp" />
+    <SUITE FILE_PATH="coverage/pyrequest$Unittests_for_model_1_ModelTest.coverage" NAME="Unittests for model_1.ModelTest Coverage Results" MODIFIED="1507428500876" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model_script" />
+    <SUITE FILE_PATH="coverage/pyrequest$base.coverage" NAME="base Coverage Results" MODIFIED="1507428389890" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/base" />
+    <SUITE FILE_PATH="coverage/pyrequest$model_1.coverage" NAME="model_1 Coverage Results" MODIFIED="1507428868946" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model_script" />
+    <SUITE FILE_PATH="coverage/pyrequest$Unittests_in_mock_train1_py.coverage" NAME="Unittests in mock_train1.py Coverage Results" MODIFIED="1507212054461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mock_train" />
+    <SUITE FILE_PATH="coverage/pyrequest$Metal.coverage" NAME="Metal Coverage Results" MODIFIED="1510730866130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/auto" />
+    <SUITE FILE_PATH="coverage/pyrequest$proxy.coverage" NAME="proxy Coverage Results" MODIFIED="1507731685316" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/pyrequest$pd.coverage" NAME="pd Coverage Results" MODIFIED="1509450190632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/auto" />
+    <SUITE FILE_PATH="coverage/pyrequest$run_tests.coverage" NAME="run_tests Coverage Results" MODIFIED="1508482553044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pyrequest$Unittests_in_first_test_py.coverage" NAME="Unittests in first_test.py Coverage Results" MODIFIED="1507189337842" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface" />
     <SUITE FILE_PATH="coverage/pyrequest$Unittests_for_model1_test_ModelTest_test_model.coverage" NAME="Unittests for model1_test.ModelTest.test_model Coverage Results" MODIFIED="1508483166260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model_script" />
     <SUITE FILE_PATH="coverage/pyrequest$run_jmeter.coverage" NAME="run_jmeter Coverage Results" MODIFIED="1510799154861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/auto" />
-    <SUITE FILE_PATH="coverage/pyrequest$Unittests_in_add_event_test_py.coverage" NAME="Unittests in add_event_test.py Coverage Results" MODIFIED="1507428963624" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/temp" />
     <SUITE FILE_PATH="coverage/pyrequest$Unittests_for_first_test_FirstTest_test_firstcase.coverage" NAME="Unittests for first_test.FirstTest.test_firstcase Coverage Results" MODIFIED="1507189277042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/interface" />
   </component>
   <component name="FileEditorManager">
@@ -56,14 +61,68 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run_jmeter.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="run_jmeter.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/auto/run_jmeter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+            <state relative-caret-position="460">
+              <caret line="23" column="30" lean-forward="false" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
               <folding>
                 <element signature="e#15#24#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="moniter_cpu.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/auto/moniter/moniter_cpu.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="516">
+              <caret line="27" column="53" lean-forward="false" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="53" />
+              <folding>
+                <element signature="e#22#59#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cpu_use.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/auto/moniter/cpu_use.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mem_use_2.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/auto/moniter/mem_use_2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+              <folding>
+                <element signature="e#23#60#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cpuinfo" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/auto/moniter/cpuinfo">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1920">
+              <caret line="96" column="13" lean-forward="true" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="free" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/auto/moniter/free">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -72,21 +131,9 @@
         <entry file="file://$PROJECT_DIR$/auto/manage.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="462">
-              <caret line="98" column="65" lean-forward="true" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="65" />
+              <caret line="98" column="65" lean-forward="false" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="65" />
               <folding>
                 <element signature="e#15#46#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="run.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/auto/run.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -110,18 +157,6 @@
             <state relative-caret-position="0">
               <caret line="0" column="80" lean-forward="false" selection-start-line="0" selection-start-column="73" selection-end-line="0" selection-end-column="80" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="echarts.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/auto/echarts.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -178,6 +213,12 @@
         <option value="$PROJECT_DIR$/auto/manage.py" />
         <option value="$PROJECT_DIR$/auto/temp.py" />
         <option value="$PROJECT_DIR$/auto/run_jmeter.py" />
+        <option value="$PROJECT_DIR$/auto/moniter/cpuinfo" />
+        <option value="$PROJECT_DIR$/auto/moniter/moniter_cpu.py" />
+        <option value="$PROJECT_DIR$/auto/moniter/stat" />
+        <option value="$PROJECT_DIR$/auto/moniter/cpu_use.py" />
+        <option value="$PROJECT_DIR$/auto/moniter/mem_use.py" />
+        <option value="$PROJECT_DIR$/auto/moniter/mem_use_2.py" />
       </list>
     </option>
   </component>
@@ -195,10 +236,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
+    <option name="x" value="1672" />
     <option name="y" value="-8" />
     <option name="width" value="1696" />
-    <option name="height" value="1066" />
+    <option name="height" value="1026" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -231,6 +272,12 @@
               <item name="pyrequest" type="b2602c69:ProjectViewProjectNode" />
               <item name="pyrequest" type="462c0819:PsiDirectoryNode" />
               <item name="auto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pyrequest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pyrequest" type="462c0819:PsiDirectoryNode" />
+              <item name="auto" type="462c0819:PsiDirectoryNode" />
+              <item name="moniter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pyrequest" type="b2602c69:ProjectViewProjectNode" />
@@ -280,7 +327,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.run_jmeter">
+  <component name="RunManager" selected="Python.cpu_use">
     <configuration name="Metal" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -299,38 +346,38 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="cpu_use" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/auto" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/auto/moniter" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="pyrequest" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/auto/manage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/auto/moniter/cpu_use.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="pd" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="moniter_cpu" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/auto" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/auto/moniter" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="pyrequest" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/auto/pd.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/auto/moniter/moniter_cpu.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -372,19 +419,19 @@
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.manage" />
-      <item index="1" class="java.lang.String" itemvalue="Python.pd" />
-      <item index="2" class="java.lang.String" itemvalue="Python.Metal" />
-      <item index="3" class="java.lang.String" itemvalue="Python.temp" />
-      <item index="4" class="java.lang.String" itemvalue="Python.run_jmeter" />
+      <item index="0" class="java.lang.String" itemvalue="Python.Metal" />
+      <item index="1" class="java.lang.String" itemvalue="Python.temp" />
+      <item index="2" class="java.lang.String" itemvalue="Python.run_jmeter" />
+      <item index="3" class="java.lang.String" itemvalue="Python.moniter_cpu" />
+      <item index="4" class="java.lang.String" itemvalue="Python.cpu_use" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.run_jmeter" />
-        <item index="1" class="java.lang.String" itemvalue="Python.temp" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Metal" />
-        <item index="3" class="java.lang.String" itemvalue="Python.manage" />
-        <item index="4" class="java.lang.String" itemvalue="Python.pd" />
+        <item index="0" class="java.lang.String" itemvalue="Python.cpu_use" />
+        <item index="1" class="java.lang.String" itemvalue="Python.moniter_cpu" />
+        <item index="2" class="java.lang.String" itemvalue="Python.run_jmeter" />
+        <item index="3" class="java.lang.String" itemvalue="Python.temp" />
+        <item index="4" class="java.lang.String" itemvalue="Python.Metal" />
       </list>
     </recent_temporary>
   </component>
@@ -442,7 +489,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1066" extended-state="6" />
+    <frame x="1672" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23471883" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -450,20 +497,20 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28193325" sideWeight="0.502445" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893288" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32796317" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31353134" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3256617" sideWeight="0.49755502" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42117375" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29919448" sideWeight="0.49755502" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42117375" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -529,62 +576,22 @@
           <line>53</line>
           <option name="timeStamp" value="49" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/auto/moniter/moniter_cpu.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/auto/moniter/moniter_cpu.py</url>
+          <line>31</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="50" />
+      <option name="time" value="52" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/temp/add_event_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="55" column="58" lean-forward="true" selection-start-line="55" selection-start-column="58" selection-end-line="55" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HTMLTestRunner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15360">
-          <caret line="773" column="20" lean-forward="false" selection-start-line="773" selection-start-column="20" selection-end-line="773" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mock_train/mock_train1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="28" column="20" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forwording/port_forword.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="69" column="44" lean-forward="false" selection-start-line="69" selection-start-column="44" selection-end-line="69" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forwording/port-forward.config">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="21" lean-forward="false" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db_fixture/need_test">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/proxy.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
@@ -838,7 +845,7 @@
     <entry file="file://$PROJECT_DIR$/auto/manage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
-          <caret line="98" column="65" lean-forward="true" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="65" />
+          <caret line="98" column="65" lean-forward="false" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="65" />
           <folding>
             <element signature="e#15#46#0" expanded="true" />
           </folding>
@@ -857,10 +864,70 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/auto/run_jmeter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+        <state relative-caret-position="460">
+          <caret line="23" column="30" lean-forward="false" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
           <folding>
             <element signature="e#15#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auto/moniter/stat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auto/moniter/free">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auto/moniter/moniter_cpu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="27" column="53" lean-forward="false" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="53" />
+          <folding>
+            <element signature="e#22#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auto/moniter/mem_use.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="32" column="14" lean-forward="true" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auto/moniter/cpuinfo">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1920">
+          <caret line="96" column="13" lean-forward="true" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auto/moniter/cpu_use.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auto/moniter/mem_use_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+          <folding>
+            <element signature="e#23#60#0" expanded="true" />
           </folding>
         </state>
       </provider>
