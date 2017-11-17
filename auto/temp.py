@@ -2,7 +2,7 @@
 from __future__ import division
 from bs4 import BeautifulSoup
 import csv
-import os
+import os, errno
 import xlsxwriter
 from xmlutils.xml2csv import xml2csv
 from xmlutils.xml2json import xml2json
@@ -13,7 +13,6 @@ import numpy as na
 import pandas as pd
 import time
 import re
-
 
 # obj = Series([4, 7, -5, 3])
 # print obj.values
@@ -77,5 +76,19 @@ def _test():
     print Template.delimiter
 
 
+def mkdir():
+    currpath = os.path.dirname(os.path.realpath(__file__))
+    path = 'PerformanceTest'
+    folders = ['script','reuslt']
+    for each in folders:
+        try:
+            os.makedirs(os.path.join(currpath, path, each))
+        except OSError as e:
+            if e.errno == errno.EEXIST and os.path.isdir(path):
+                pass
+            else:
+                raise
+
+
 if __name__ == '__main__':
-    _test()
+    mkdir()
