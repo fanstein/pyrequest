@@ -4,14 +4,16 @@ import errno
 import subprocess
 import time
 from string import Template
+import platform
 
 currpath = os.path.dirname(os.path.realpath(__file__))
 
-JmxTemlFileName = "D:/Users/fanp/Desktop/jp@gc - Dummy Sampler.jmx"
+JmxTemlFileName = "D:\\Users\\fanp\\Desktop\\jp@gc - Dummy Sampler.jmx"
 
-JMETER_Home = "D:/apache-jmeter-3.3/bin/jmeter.bat"
+JMETER_Home = "D:\\apache-jmeter-3.3\\bin\\jmeter.bat"
 
-path = u'性能测试项目'
+path = 'PerformanceTest'
+
 
 def getDateTime():
     '''
@@ -42,22 +44,26 @@ def execjmxs(Num_Threads, Loops):
             loops=Loops
         )
     now = getDateTime()
-    tmpjmxfile = os.path.join(currpath , path , "/script/T{0}XL{1}{2}.jmx".format(Num_Threads, Loops, now))
+    tmpjmxfile = os.path.join(currpath,path)+ "/script/{0}U_{1}.jmx".format(Num_Threads, now)
     with open(tmpjmxfile, "w+") as file:
         file.writelines(tmpstr)
-    csvfilename = currpath +path + "/result/result{0}.csv".format(now)
-    htmlreportpath = currpath + path + "/result/htmlreport{0}".format(now)
+    csvfilename = os.path.join(currpath ,path) + "/result/{0}.csv".format(now)
+    htmlreportpath = os.path.join(currpath ,path) + "/result/report_{0}".format(now)
     if not os.path.exists(htmlreportpath):
         os.makedirs(htmlreportpath)
-    execjmxouthtml = "cmd.exe /c {JMETER_Home} -n -t {tmpjmxfile} -l {csvfilename} -e -o {htmlreportpath}"\
-    .format(JMETER_Home=JMETER_Home, tmpjmxfile=tmpjmxfile, csvfilename=csvfilename, htmlreportpath=htmlreportpath)
+    if platform.system().lower() == 'windows':
+        execjmxouthtml = "cmd.exe /c {JMETER_Home} -n -t {tmpjmxfile} -l {csvfilename} -e -o {htmlreportpath}"\
+        .format(JMETER_Home=JMETER_Home, tmpjmxfile=tmpjmxfile, csvfilename=csvfilename, htmlreportpath=htmlreportpath)
+    else:
+        execjmxouthtml = "{JMETER_Home} -n -t {tmpjmxfile} -l {csvfilename} -e -o {htmlreportpath}"\
+        .format(JMETER_Home=JMETER_Home, tmpjmxfile=tmpjmxfile, csvfilename=csvfilename, htmlreportpath=htmlreportpath)
+
     execcmd(execjmxouthtml)
 
 
 def mkdir():
     currpath = os.path.dirname(os.path.realpath(__file__))
-    path = u'性能测试项目'
-    folders = ['script','reuslt']
+    folders = ['script', 'result']
     for each in folders:
         try:
             os.makedirs(os.path.join(currpath, path, each))
