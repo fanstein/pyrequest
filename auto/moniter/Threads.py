@@ -4,12 +4,12 @@ from time import ctime,sleep
 
 
 def music(func):
-    for i in range(2):
+    for i in range(5):
         print "I was listening to %s. %s" %(func,ctime())
         sleep(1)
 
 def move(func):
-    for i in range(2):
+    for i in range(5):
         print "I was at the %s! %s" %(func,ctime())
         sleep(5)
 
@@ -21,7 +21,7 @@ threads.append(t2)
 
 if __name__ == '__main__':
     for t in threads:
-        t.setDaemon(True)
+        # t.setDaemon(True)
         t.start()
     t.join()
     print "all over %s" %ctime()

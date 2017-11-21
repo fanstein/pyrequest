@@ -25,7 +25,7 @@
             function (ec) {
                 // 基于准备好的dom，初始化echarts图表
                 var myChart = ec.init(document.getElementById('main'));
-
+                var timeTicket;
                 var option = {
                     tooltip: {
                         show: true
@@ -42,7 +42,7 @@
                         feature : {
                             mark : {show: true},
                             dataView : {show: true, readOnly: false},
-                            magicType : {show: true, type: ['line', 'bar']},
+                            magicType : {show: true, type: ['line']},
                             restore : {show: true},
                             saveAsImage : {show: true}
                         }
@@ -50,19 +50,30 @@
                     xAxis : [
                         {
                             type : 'category',
-                            data : ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+                            data : (function (){
+                                var now = new Date();
+                                var res = [];
+                                var len = 1;
+                                while (len--) {
+                                    res.unshift(now.toLocaleTimeString().replace(/^\D*/,''));
+                                    now = new Date(now + 2000);
+                                }
+                                return res;
+                            })()
                         }
                     ],
                     yAxis : [
                         {
-                            type : 'value'
+                            type : 'value',
+                            scale: true,
+                            name: 'value'
                         }
                     ],
                     series : [
                         {
                             name:"销量",
                             type:"line",
-                            data:[5, 20, 40, 10, 10, 20],
+                            data:[],
                             markLine:{
                                 data:[
                                     {type:'average',name:'平均值'}
@@ -71,7 +82,24 @@
                         }
                     ]
                 };
+                var lastData;
+                var axisData;
+                clearInterval(timeTicket);
+                timeTicket = setInterval(function (){
+                    lastData = Math.round(Math.random()*9+1);
+                    axisData = (new Date()).toLocaleTimeString().replace(/^\D*/,'');
 
+                    // 动态数据接口 addData
+                    myChart.addData([
+                        [
+                            0,        // 系列索引
+                            lastData, // 新增数据
+                            false,    // 新增数据是否从队列头部插入
+                            true,    // 是否增加队列长度，false则自定删除原有数据，队头插入删队尾，队尾插入删队头
+                            axisData  // 坐标轴标签
+                        ]
+                    ]);
+                }, 2000);
                 // 为echarts对象加载数据
                 myChart.setOption(option);
             }

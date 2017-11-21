@@ -2,9 +2,8 @@
 
 import socket
 import sys
-import thread
+import threading
 
-import time
 
 remote_ip = ['127.0.0.1', '10.33.20.20']
 port = 4444
@@ -41,10 +40,12 @@ def Client(each_ip, port):
     s.sendall(end_mes)
 
 
-for each_ip in remote_ip:
-    i = 0
-    try:
-        thread.start_new_thread(Client(each_ip, port), (i,))
-    except:
-        print "Error: unable to start thread"
-    i = i+1
+if __name__ == '__main__':
+    threads = []
+    for each_ip in remote_ip:
+        threads.append(threading.Thread(target=Client, args=(each_ip, port)))
+    for t in threads:
+        t.setDaemon(True)
+        t.start()
+    t.join()
+    print "all over"

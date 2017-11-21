@@ -13,6 +13,7 @@ import numpy as na
 import pandas as pd
 import time
 import re
+from redis import Redis
 
 # obj = Series([4, 7, -5, 3])
 # print obj.values
