@@ -9,8 +9,6 @@ import time
 remote_ip = ['127.0.0.1', '10.33.20.20']
 port = 4444
 
-
-
 def Client(each_ip, port):
     filename = each_ip + '.csv'
     try:
@@ -41,6 +39,7 @@ def Client(each_ip, port):
             print reply
     end_mes = 'exit\n'
     s.sendall(end_mes)
+
 
 for each_ip in remote_ip:
     i = 0
