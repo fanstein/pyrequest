@@ -23,17 +23,12 @@ import threading
 _this_dir = os.path.dirname(os.path.abspath(__file__))
 
 ip = ''
-
 request_text = ''
-
 currpath = os.path.dirname(os.path.realpath(__file__))
-
-JmxTemlFileName = "D:\\Users\\fanp\\Desktop\\jp@gc - Dummy Sampler.jmx"
-
+# JmxFileName = "D:\\Users\\fanp\\Desktop\\jp@gc - Dummy Sampler.jmx"
+JmxFileName = "D:\\Users\\fanp\\Desktop\\test_script.jmx"
 JMETER_Home = "D:\\apache-jmeter-3.3\\bin\\jmeter.bat"
-
 path = 'PerformanceTest'
-
 env.hosts = ['10.3.6.15']
 env.user = 'root'  # 多台主机用户名密码相同可以只写一次
 env.password = '123.Ctrip'
@@ -56,11 +51,12 @@ class BaseFunc(object):
 
 
 # 监控
-class Mointor(object):
+class Monitor(object):
     remote_ip = ['127.0.0.1', '10.33.20.20']
     port = 4444
 
     def client(self, each_ip, port):
+        print 'startMonitor'
         filename = each_ip + '.csv'
         try:
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -94,7 +90,7 @@ class Mointor(object):
     def start(self):
         threads = []
         for each_ip in self.remote_ip:
-            threads.append(threading.Thread(target=self.client(), args=(each_ip, self.port)))
+            threads.append(threading.Thread(target=self.client, args=(each_ip, self.port)))
         for t in threads:
             t.setDaemon(True)
             t.start()
@@ -140,10 +136,8 @@ class Fab(Task):
             run('unzip ServerAgent-2.2.3.zip')
             run('rm -rf ServerAgent-2.2.3.zip')
             run('(nohup sh /root/Desktop/ff/ServerAgent-2.2.3/startAgent.sh &) && sleep 1')
-            time.sleep(10)
+            time.sleep(5)
             run('pkill -f CMDRunner.jar')
-            # pid = run('pgrep -f CMDRunner.jar')
-            # run('kill '+pid)
             run('rm -rf ServerAgent-2.2.3')
 
 
@@ -162,22 +156,9 @@ class runJmeter(object):
         return time.strftime(r'%d%H%M%S', time.localtime(time.time()))
 
     @staticmethod
-    def execcmd(command):
-        print "command " + command
-
-        output = subprocess.Popen(
-            command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True,
-            universal_newlines=True)
-
-        stderrinfo, stdoutinfo = output.communicate()
-        print "stderrinfo " + stderrinfo
-        print "stdoutinfo " + stdoutinfo
-        print "returncode={0}".format(output.returncode)
-
-    @staticmethod
     def execjmxs(Num_Threads, duration=600):
         runJmeter.mkdir()
-        with open(JmxTemlFileName, "r") as file:
+        with open(JmxFileName, "r") as file:
             tmpstr = Template(file.read()).safe_substitute(
                 num_threads=Num_Threads,
                 duration=duration
@@ -199,7 +180,7 @@ class runJmeter(object):
                 .format(JMETER_Home=JMETER_Home, tmpjmxfile=tmpjmxfile, csvfilename=csvfilename,
                         htmlreportpath=htmlreportpath)
 
-        runJmeter.execcmd(execjmxouthtml)
+        BaseFunc.execcmd(execjmxouthtml)
 
     @staticmethod
     def mkdir():
@@ -217,14 +198,30 @@ class runJmeter(object):
 
 # 获取jmeter脚本信息
 class GetInfo(object):
+
     def get_request(self):
-        fo = open("test.jmx", "r")
+        fo = open(JmxFileName, "r")
         script = fo.read().decode("utf8").encode("GB2312")
         soup = BeautifulSoup(script, "xml")
-        ip = soup.HTTPSamplerProxy.find("stringProp", attrs={"name": "HTTPSampler.domain"}).text
-        request_text = soup.HTTPSamplerProxy.find("stringProp", attrs={"name": "Argument.value"}).text
-        print u"接口ip:" + ip
-        print u"报文:" + request_text
+        try:
+            ip = soup.HTTPSamplerProxy.find("stringProp", attrs={"name": "HTTPSampler.domain"}).text
+            if ip == '':
+                ip = soup.ConfigTestElement.find("stringProp", attrs={"name": "HTTPSampler.domain"}).text
+            if ip[0] == '$':
+                name = ip[2:][:-1]
+                try:
+                    ip = soup.collectionProp.find("elementProp", attrs={"name": name}).find("stringProp", attrs={"name": "Argument.value"}).text
+                except:
+                    ip = soup.hashTree.find("Arguments", attrs={"testname": "User Defined Variables"}).\
+                        find("elementProp", attrs={"name": name}).find("stringProp", attrs={"name": "Argument.value"}).text
+            request_text = soup.HTTPSamplerProxy.find("stringProp", attrs={"name": "Argument.value"}).text
+        except AttributeError:
+            print u'Error:找不到ip和请求报文'
+            print u'不监控资源利用率'
+        else:
+            print u"接口ip:" + ip
+            print u"报文:" + request_text
+            return ip, request_text
 
 
 # 结果文件
@@ -250,7 +247,6 @@ class Parse(object):
         time_stamp = []
         start_times = []
         error_count = []
-        response = ''
         threads = []
         lables = []
         parser = create_parser('10-overall-summary.csv')
@@ -299,7 +295,7 @@ class Parse(object):
         return timestamp
 
     @staticmethod
-    def t2s(self, t):
+    def t2s(t):
         x = re.split(':|\.', str(t))
         if len(x) == 4:
             time_stamp = (int(x[0]) * 60 * 60 + int(x[1]) * 60 + int(x[2]) + float('0.' + x[3])) * 1000
@@ -335,4 +331,6 @@ if __name__ == '__main__':
     # jtl_summary()
     # csv_parse()
     # run()
-    BaseFunc.execcmd('fab -f manage.py deploy')
+    # BaseFunc.execcmd('fab -f manage.py deploy')
+    # Monitor().start()
+    print GetInfo().get_request()
