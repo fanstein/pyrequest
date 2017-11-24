@@ -198,8 +198,8 @@ class runJmeter(object):
 
 # 获取jmeter脚本信息
 class GetInfo(object):
-
     def get_request(self):
+        info = {}
         fo = open(JmxFileName, "r")
         script = fo.read().decode("utf8").encode("GB2312")
         soup = BeautifulSoup(script, "xml")
@@ -210,10 +210,12 @@ class GetInfo(object):
             if ip[0] == '$':
                 name = ip[2:][:-1]
                 try:
-                    ip = soup.collectionProp.find("elementProp", attrs={"name": name}).find("stringProp", attrs={"name": "Argument.value"}).text
+                    ip = soup.collectionProp.find("elementProp", attrs={"name": name}).find("stringProp", attrs={
+                        "name": "Argument.value"}).text
                 except:
-                    ip = soup.hashTree.find("Arguments", attrs={"testname": "User Defined Variables"}).\
-                        find("elementProp", attrs={"name": name}).find("stringProp", attrs={"name": "Argument.value"}).text
+                    ip = soup.hashTree.find("Arguments", attrs={"testname": "User Defined Variables"}). \
+                        find("elementProp", attrs={"name": name}).find("stringProp",
+                                                                       attrs={"name": "Argument.value"}).text
             request_text = soup.HTTPSamplerProxy.find("stringProp", attrs={"name": "Argument.value"}).text
         except AttributeError:
             print u'Error:找不到ip和请求报文'
@@ -221,7 +223,8 @@ class GetInfo(object):
         else:
             print u"接口ip:" + ip
             print u"报文:" + request_text
-            return ip, request_text
+            info = {'ip': ip, "request": request_text}
+            return info
 
 
 # 结果文件
