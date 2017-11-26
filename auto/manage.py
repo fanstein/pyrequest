@@ -19,6 +19,7 @@ from fabric.api import *
 from fabric.tasks import Task
 import socket
 import threading
+import multiprocessing
 
 _this_dir = os.path.dirname(os.path.abspath(__file__))
 
@@ -26,7 +27,7 @@ ip = ''
 request_text = ''
 currpath = os.path.dirname(os.path.realpath(__file__))
 # JmxFileName = "D:\\Users\\fanp\\Desktop\\jp@gc - Dummy Sampler.jmx"
-JmxFileName = "D:\\Users\\fanp\\Desktop\\test_script.jmx"
+JmxFileName = "test_script.jmx"
 JMETER_Home = "D:\\apache-jmeter-3.3\\bin\\jmeter.bat"
 path = 'PerformanceTest'
 env.hosts = ['10.3.6.15']
@@ -52,10 +53,15 @@ class BaseFunc(object):
 
 # 监控
 class Monitor(object):
-    remote_ip = ['127.0.0.1', '10.33.20.20']
-    port = 4444
+    def __init__(self, remote_ip, end_time, port=4, ):
+        self.remote_ip = remote_ip
+        self.port = port
+        self.end_time = end_time
 
-    def client(self, each_ip, port):
+    # remote_ip = ['127.0.0.1', '10.33.20.20']
+    # port = 4444
+
+    def client(self, each_ip, port, end_time):
         print 'startMonitor'
         filename = each_ip + '.csv'
         try:
@@ -74,10 +80,9 @@ class Monitor(object):
             message = 'test\ninterval:1\nmetrics:cpu:	memory:	\n'
             s.sendall(message)
         except socket.error:
-            # Send failed
             print 'Send failed'
             sys.exit()
-        for each in range(1, 10):
+        while time.time() <= end_time:
             with open(filename, 'a') as f:
                 reply = s.recv(1024)
                 reply = reply.replace('\t', ',')
@@ -94,7 +99,6 @@ class Monitor(object):
         for t in threads:
             t.setDaemon(True)
             t.start()
-        t.join()
         print "all over"
 
 
@@ -151,15 +155,15 @@ class runJmeter(object):
     @staticmethod
     def getDateTime():
         '''
-        获取当前日期时间，格式'20150708085159'
+        获取当前日期时间，格式'08085159'
         '''
         return time.strftime(r'%d%H%M%S', time.localtime(time.time()))
 
     @staticmethod
     def execjmxs(Num_Threads, duration=600):
         runJmeter.mkdir()
-        with open(JmxFileName, "r") as file:
-            tmpstr = Template(file.read()).safe_substitute(
+        with open(JmxFileName, "r") as f:
+            tmpstr = Template(f.read()).safe_substitute(
                 num_threads=Num_Threads,
                 duration=duration
             )
@@ -313,27 +317,54 @@ def usage():
 
 
 def do():
-    opts, args = getopt.getopt(sys.argv[1:], "hi:t:", ["version", "file="])
-    input_file = ""
-    output_file = ""
+    opts, args = getopt.getopt(sys.argv[1:], "hr:t:u:s:d:", ["version", "file"])
+    output_dir = ""
+    duration = ""
+    user = []
+    sever_o = False
+    exec_test = False
     for op, value in opts:
-        if op == "-i":
-            input_file = value
+        if op == "-r":
+            exec_test = True
         elif op == "-t":
-            output_file = value
+            duration = value
+        elif op == "-u":
+            for each in value.split(","):
+                user.append(each)
+            user.sort()
         elif op == "-h":
             usage()
+        elif op == "-f":
+            output_dir = value
+        elif op == "-s":
+            print "server start port 8787"
+            sever_o = True
         elif op == "--version":
             print "version 1.0"
             sys.exit()
-    print input_file, output_file
+    if sever_o:
+        BaseFunc.execcmd("python -m SimpleHTTPServer 8787")
+
+    if exec_test:
+        info = GetInfo().get_request()
+        start_time = time.time()
+        end_time = start_time + duration
+
+        for thread in user:
+            p = multiprocessing.Pool(4)
+            # 执行测试
+            p.apply_async(runJmeter.execjmxs, args=(thread, duration))
+            # 部署性能监控服务
+            p.apply_async(BaseFunc.execcmd, args=('fab -f manage.py deploy',))
+            # 监控
+            p.apply_async(Monitor(remote_ip=info['ip'], port=4444, end_time=end_time).start, )
+            p.close()
+            p.join()
+            print str(thread) + "all over"
+            print duration
+    else:
+        Parse().csv_parse()
 
 
 if __name__ == '__main__':
-    # jtl_parse()
-    # jtl_summary()
-    # csv_parse()
-    # run()
-    # BaseFunc.execcmd('fab -f manage.py deploy')
-    # Monitor().start()
-    print GetInfo().get_request()
+    do()

@@ -11,4 +11,11 @@
 1、自动执行
     getinfo:获取脚本信息
     ip有几种输入方式：1、Http sampler 2、http defaults 3、${ip}
-    是否会有域名
+    是否会有域名（待处理）
+    返回ip and request
+
+    runjmeter:执行脚本
+    传入参数：线程数、执行时长
+    （目录地址、目录包含）
+
+

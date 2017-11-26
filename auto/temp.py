@@ -1,5 +1,9 @@
 # coding=utf-8
 from __future__ import division
+
+import getopt
+
+import sys
 from bs4 import BeautifulSoup
 import csv
 import os, errno
@@ -13,7 +17,7 @@ import numpy as na
 import pandas as pd
 import time
 import re
-from redis import Redis
+from datetime import datetime, timedelta
 
 # obj = Series([4, 7, -5, 3])
 # print obj.values
@@ -91,79 +95,71 @@ def mkdir():
                 raise
 
 
-# ! /usr/bin/env python
-# -*- coding:utf-8 -*-
-# xml 转 json
-# xml2json.py
-# Version 1.0
-
-from xml.parsers.expat import ParserCreate
-import json
+def test1():
+    for each in range(5):
+        print "a"
+        time.sleep(1)
 
 
-class Xml2Json:
-    LIST_TAGS = ['COMMANDS']
+def test2():
+    for each in range(5):
+        print "b"
+        time.sleep(1)
 
-    def __init__(self, data=None):
-        self._parser = ParserCreate()
-        self._parser.StartElementHandler = self.start
-        self._parser.EndElementHandler = self.end
-        self._parser.CharacterDataHandler = self.data
-        self.result = None
-        if data:
-            self.feed(data)
-            self.close()
+def multi():
+    from multiprocessing import Pool
+    for i in range(2):
+        p = Pool(2)
+        print i
+        p.apply_async(test1)
+        p.apply_async(test2)
+        p.close()
+        p.join()
 
-    def feed(self, data):
-        self._stack = []
-        self._data = ''
-        self._parser.Parse(data, 0)
 
-    def close(self):
-        self._parser.Parse("", 1)
-        del self._parser
 
-    def start(self, tag, attrs):
-        assert attrs == {}
-        assert self._data.strip() == ''
-        self._stack.append([tag])
-        self._data = ''
+def usage():
+    print "usage"
 
-    def end(self, tag):
-        last_tag = self._stack.pop()
-        assert last_tag[0] == tag
-        if len(last_tag) == 1:  # leaf
-            data = self._data
-        else:
-            if tag not in Xml2Json.LIST_TAGS:
-                # build a dict, repeating pairs get pushed into lists
-                data = {}
-                for k, v in last_tag[1:]:
-                    if k not in data:
-                        data[k] = v
-                    else:
-                        el = data[k]
-                        if type(el) is not list:
-                            data[k] = [el, v]
-                        else:
-                            el.append(v)
-            else:  # force into a list
-                data = [{k: v} for k, v in last_tag[1:]]
-        if self._stack:
-            self._stack[-1].append((tag, data))
-        else:
-            self.result = {tag: data}
-        self._data = ''
-
-    def data(self, data):
-        self._data = data
+def do():
+    opts, args = getopt.getopt(sys.argv[1:], "hi:t:", ["version", "file="])
+    input_file = ""
+    output_file = ""
+    for op, value in opts:
+        if op == "-i":
+            input_file = value
+            for each in value.split(","):
+                print each
+        elif op == "-t":
+            output_file = value
+            for each in value.split(","):
+                print each
+        elif op == "-h":
+            usage()
+        elif op == "--version":
+            print "version 1.0"
+            sys.exit()
+    print input_file, output_file
 
 
 if __name__ == '__main__':
-    xml = open("D:\\Users\\fanp\\Desktop\\test_script.jmx", 'r').read()
-    result = Xml2Json(xml).result
-    print result
+    multi()
+    # xml = open("D:\\Users\\fanp\\Desktop\\test_script.jmx", 'r').read()
+    # result = Xml2Json(xml).result
+    # print result
     # outputfile = open("京东手机列表_1.json", 'w', encoding='UTF-8')
     # outputfile.write(str(result))
     # outputfile.close()
+    # start = time.time()
+    # print start
+    # constant = 5
+    # end = start + constant
+    # print end
+    # while time.time() <= end:
+    #     print time.time()
+    #     time.sleep(1)
+
+
+
+
 
