@@ -5,7 +5,7 @@ import smtplib
 from email.mime.text import MIMEText
 from email.utils import formataddr
 
-my_sender = '935766346'  # 发件人邮箱账号
+my_sender = '935766346@qq.com'  # 发件人邮箱账号
 my_pass = 'pbmpocrsnjyhbffe'  # 发件人邮箱密码
 my_user = '935766346@qq.com'  # 收件人邮箱账号，我这边发送给自己
 
