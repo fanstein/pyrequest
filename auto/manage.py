@@ -183,7 +183,6 @@ class runJmeter(object):
             execjmxouthtml = "{JMETER_Home} -n -t {tmpjmxfile} -l {csvfilename} -e -o {htmlreportpath}" \
                 .format(JMETER_Home=JMETER_Home, tmpjmxfile=tmpjmxfile, csvfilename=csvfilename,
                         htmlreportpath=htmlreportpath)
-
         BaseFunc.execcmd(execjmxouthtml)
 
     @staticmethod
@@ -198,7 +197,6 @@ class runJmeter(object):
                     pass
                 else:
                     raise
-
 
 # 获取jmeter脚本信息
 class GetInfo(object):
