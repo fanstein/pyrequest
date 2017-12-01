@@ -1,0 +1,878 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="3.2" jmeter="3.3 r1808647">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${threads}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1512008138000</longProp>
+        <longProp name="ThreadGroup.end_time">1512008138000</longProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.duration">10</stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="shopingcar" enabled="true">
+          <stringProp name="TestPlan.comments">11</stringProp>
+        </GenericController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="SetShoppingCar" enabled="false">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+	&quot;Version&quot; : 1,&#xd;
+	&quot;Channel&quot; : &quot;H5&quot;,&#xd;
+	&quot;ShoppingId&quot; : &quot;9a7833062f264645a7e7d09beb00d404&quot;,&#xd;
+	&quot;TokenList&quot; : [&quot;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&quot;,&#xd;
+    &quot;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&quot;,&#xd;
+    &quot;02_H1497031_R2111364_I2017-12-23_O2017-12-26_C0_RatePlan_SP0_RP951_SH381919_SID0_SCtx_SPay_PFalse_Segment3_V29527B69582865D2CE4E8452DC9C669&quot;],&#xd;
+	&quot;head&quot; : {&#xd;
+		&quot;syscode&quot; : &quot;String&quot;,&#xd;
+		&quot;lang&quot; : &quot;String&quot;,&#xd;
+		&quot;auth&quot; : &quot;String&quot;,&#xd;
+		&quot;cid&quot; : &quot;String&quot;,&#xd;
+		&quot;ctok&quot; : &quot;String&quot;,&#xd;
+		&quot;cver&quot; : &quot;String&quot;,&#xd;
+		&quot;sid&quot; : &quot;String&quot;,&#xd;
+		&quot;extension&quot; : [{&#xd;
+				&quot;name&quot; : &quot;String&quot;,&#xd;
+				&quot;value&quot; : &quot;String&quot;&#xd;
+			}&#xd;
+		],&#xd;
+		&quot;pauth&quot; : &quot;String&quot;,&#xd;
+		&quot;sauth&quot; : &quot;String&quot;&#xd;
+	},&#xd;
+	&quot;AddType&quot; : 0&#xd;
+}&#xd;
+</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">ws.shopping.frt.fat95.qa.nt.ctripcorp.com</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+            <stringProp name="HTTPSampler.path">/frt-newshopping-engine-ws/api/recommend/json/SetShoppingCar</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Postman-Token" elementType="Header">
+                  <stringProp name="Header.name">Postman-Token</stringProp>
+                  <stringProp name="Header.value">e7228915-780b-4613-9d6d-08782aa6b306</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="cache-control" elementType="Header">
+                  <stringProp name="Header.name">cache-control</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+                <elementProp name="accept-encoding" elementType="Header">
+                  <stringProp name="Header.name">accept-encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">PostmanRuntime/6.4.1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="373764610">&quot;Ack&quot;:&quot;Success&quot;</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">2</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GetShoppingCar" enabled="false">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+	&quot;Version&quot; : 1,&#xd;
+	&quot;Channel&quot; : &quot;H5&quot;,&#xd;
+	&quot;ShoppingId&quot; : &quot;9a7833062f264645a7e7d09beb00d404&quot;,&#xd;
+	&quot;head&quot; : {&#xd;
+		&quot;syscode&quot; : &quot;String&quot;,&#xd;
+		&quot;lang&quot; : &quot;String&quot;,&#xd;
+		&quot;auth&quot; : &quot;String&quot;,&#xd;
+		&quot;cid&quot; : &quot;String&quot;,&#xd;
+		&quot;ctok&quot; : &quot;String&quot;,&#xd;
+		&quot;cver&quot; : &quot;String&quot;,&#xd;
+		&quot;sid&quot; : &quot;String&quot;,&#xd;
+		&quot;extension&quot; : [{&#xd;
+				&quot;name&quot; : &quot;String&quot;,&#xd;
+				&quot;value&quot; : &quot;String&quot;&#xd;
+			}&#xd;
+		],&#xd;
+		&quot;pauth&quot; : &quot;String&quot;,&#xd;
+		&quot;sauth&quot; : &quot;String&quot;&#xd;
+	}&#xd;
+}&#xd;
+</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">ws.shopping.frt.fat95.qa.nt.ctripcorp.com</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+            <stringProp name="HTTPSampler.path">/frt-newshopping-engine-ws/api/recommend/json/GetShoppingCar</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Postman-Token" elementType="Header">
+                  <stringProp name="Header.name">Postman-Token</stringProp>
+                  <stringProp name="Header.value">bd70198e-878e-4c67-bb9a-a94c94d5319d</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="cache-control" elementType="Header">
+                  <stringProp name="Header.name">cache-control</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+                <elementProp name="accept-encoding" elementType="Header">
+                  <stringProp name="Header.name">accept-encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">PostmanRuntime/6.4.1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="373764610">&quot;Ack&quot;:&quot;Success&quot;</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">2</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="DeleteShoppingCar" enabled="false">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+	&quot;Version&quot; : 1,&#xd;
+	&quot;Channel&quot; : &quot;H5&quot;,&#xd;
+	&quot;ShoppingId&quot; : &quot;9a7833062f264645a7e7d09beb00d404&quot;,&#xd;
+	&quot;TokenList&quot; : [&quot;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&quot;,&#xd;
+    &quot;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&quot;,&#xd;
+    &quot;02_H1497031_R2111364_I2017-12-23_O2017-12-26_C0_RatePlan_SP0_RP951_SH381919_SID0_SCtx_SPay_PFalse_Segment3_V29527B69582865D2CE4E8452DC9C669&quot;],&#xd;
+	&quot;head&quot; : {&#xd;
+		&quot;syscode&quot; : &quot;String&quot;,&#xd;
+		&quot;lang&quot; : &quot;String&quot;,&#xd;
+		&quot;auth&quot; : &quot;String&quot;,&#xd;
+		&quot;cid&quot; : &quot;String&quot;,&#xd;
+		&quot;ctok&quot; : &quot;String&quot;,&#xd;
+		&quot;cver&quot; : &quot;String&quot;,&#xd;
+		&quot;sid&quot; : &quot;String&quot;,&#xd;
+		&quot;extension&quot; : [{&#xd;
+				&quot;name&quot; : &quot;String&quot;,&#xd;
+				&quot;value&quot; : &quot;String&quot;&#xd;
+			}&#xd;
+		],&#xd;
+		&quot;pauth&quot; : &quot;String&quot;,&#xd;
+		&quot;sauth&quot; : &quot;String&quot;&#xd;
+	}&#xd;
+}&#xd;
+</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">ws.shopping.frt.fat95.qa.nt.ctripcorp.com</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+            <stringProp name="HTTPSampler.path">/frt-newshopping-engine-ws/api/recommend/json/DeleteShoppingCar</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Postman-Token" elementType="Header">
+                  <stringProp name="Header.name">Postman-Token</stringProp>
+                  <stringProp name="Header.value">d8e12b10-f0b0-45a7-9975-1dcd7bd9375c</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="cache-control" elementType="Header">
+                  <stringProp name="Header.name">cache-control</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+                <elementProp name="accept-encoding" elementType="Header">
+                  <stringProp name="Header.name">accept-encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">PostmanRuntime/6.4.1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="373764610">&quot;Ack&quot;:&quot;Success&quot;</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">2</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="ShoppingIdGet" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+	&quot;Version&quot; : 1,&#xd;
+	&quot;Channel&quot; : &quot;H5&quot;,&#xd;
+	&quot;OrderId&quot; : 3062636081,&#xd;
+	&quot;head&quot; : {&#xd;
+		&quot;syscode&quot; : &quot;String&quot;,&#xd;
+		&quot;lang&quot; : &quot;String&quot;,&#xd;
+		&quot;auth&quot; : &quot;String&quot;,&#xd;
+		&quot;cid&quot; : &quot;String&quot;,&#xd;
+		&quot;ctok&quot; : &quot;String&quot;,&#xd;
+		&quot;cver&quot; : &quot;String&quot;,&#xd;
+		&quot;sid&quot; : &quot;String&quot;,&#xd;
+		&quot;extension&quot; : [{&#xd;
+				&quot;name&quot; : &quot;String&quot;,&#xd;
+				&quot;value&quot; : &quot;String&quot;&#xd;
+			}&#xd;
+		],&#xd;
+		&quot;pauth&quot; : &quot;String&quot;,&#xd;
+		&quot;sauth&quot; : &quot;String&quot;&#xd;
+	},&#xd;
+	&quot;UID&quot; : &quot;test111111&quot;&#xd;
+}&#xd;
+</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">ws.shopping.frt.fat95.qa.nt.ctripcorp.com</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/frt-newshopping-engine-ws/api/recommend/json/ShoppingIdGet</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Postman-Token" elementType="Header">
+                  <stringProp name="Header.name">Postman-Token</stringProp>
+                  <stringProp name="Header.value">aaaeb6ea-e75c-4d53-8c81-c8901e8fd539</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="cache-control" elementType="Header">
+                  <stringProp name="Header.name">cache-control</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+                <elementProp name="accept-encoding" elementType="Header">
+                  <stringProp name="Header.name">accept-encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">PostmanRuntime/6.4.1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="373764610">&quot;Ack&quot;:&quot;Success&quot;</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">2</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+          </hashTree>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="search" enabled="false"/>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="XCategoryList" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+	&quot;Version&quot;: 7090,&#xd;
+	&quot;Channel&quot;: &quot;H5&quot;,&#xd;
+	&quot;ShoppingId&quot;: &quot;d57b3021aea34235961a1fc477bc73e5&quot;,&#xd;
+	&quot;head&quot;: {&#xd;
+		&quot;syscode&quot;: &quot;String&quot;,&#xd;
+		&quot;lang&quot;: &quot;String&quot;,&#xd;
+		&quot;auth&quot;: &quot;String&quot;,&#xd;
+		&quot;cid&quot;: &quot;String&quot;,&#xd;
+		&quot;ctok&quot;: &quot;String&quot;,&#xd;
+		&quot;cver&quot;: &quot;String&quot;,&#xd;
+		&quot;sid&quot;: &quot;String&quot;,&#xd;
+		&quot;extension&quot;: [{&#xd;
+			&quot;name&quot;: &quot;String&quot;,&#xd;
+			&quot;value&quot;: &quot;String&quot;&#xd;
+		}],&#xd;
+		&quot;pauth&quot;: &quot;String&quot;,&#xd;
+		&quot;sauth&quot;: &quot;String&quot;&#xd;
+	}&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">ws.shopping.frt.fat96.qa.nt.ctripcorp.com</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/frt-newshopping-engine-ws/api/recommend/json/XCategoryList</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings"/>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">2</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Postman-Token" elementType="Header">
+                  <stringProp name="Header.name">Postman-Token</stringProp>
+                  <stringProp name="Header.value">64886b3b-7120-47b4-9c62-770e88d96d77</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="cache-control" elementType="Header">
+                  <stringProp name="Header.name">cache-control</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+                <elementProp name="accept-encoding" elementType="Header">
+                  <stringProp name="Header.name">accept-encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">PostmanRuntime/6.4.1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="ScenicSpotSearch" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#xd;
+&lt;ScenicSpotSearchRequest xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://soa.ctrip.com/frt/product/shoppingServices/v1&quot;&gt;&#xd;
+  &lt;Version xmlns=&quot;http://soa.ctrip.com/frt/product/xresource/v1&quot;&gt;7800&lt;/Version&gt;&#xd;
+  &lt;Channel xmlns=&quot;http://soa.ctrip.com/frt/product/xresource/v1&quot;&gt;H5&lt;/Channel&gt;&#xd;
+  &lt;ShoppingId xmlns=&quot;http://soa.ctrip.com/frt/product/xresource/v1&quot;&gt;ff3e1f5253764cc48b15ef5795436e45&lt;/ShoppingId&gt;&#xd;
+&#xd;
+  &lt;ImageSize xmlns=&quot;http://soa.ctrip.com/frt/product/xresource/v1&quot;&gt;&lt;/ImageSize&gt;&#xd;
+  &lt;SortParameter xmlns=&quot;http://soa.ctrip.com/frt/product/xresource/v1&quot;&gt;&#xd;
+    &lt;SortType&gt;P&lt;/SortType&gt;&#xd;
+    &lt;SortDirection&gt;A&lt;/SortDirection&gt;&#xd;
+    &lt;SortLabelList&gt;&#xd;
+      &lt;Key&gt;D&lt;/Key&gt;&#xd;
+      &lt;Value&gt;2&lt;/Value&gt;&#xd;
+    &lt;/SortLabelList&gt;&#xd;
+  &lt;/SortParameter&gt;&#xd;
+  &lt;Pager xmlns=&quot;http://soa.ctrip.com/frt/product/xresource/v1&quot;&gt;&#xd;
+    &lt;PageSize xmlns=&quot;http://soa.ctrip.com/frt/product/frtcommon/v1&quot;&gt;20&lt;/PageSize&gt;&#xd;
+    &lt;PageIndex xmlns=&quot;http://soa.ctrip.com/frt/product/frtcommon/v1&quot;&gt;1&lt;/PageIndex&gt;&#xd;
+  &lt;/Pager&gt;&#xd;
+  &lt;FilterList xmlns=&quot;http://soa.ctrip.com/frt/product/xresource/v1&quot;&gt;&#xd;
+    &lt;Key&gt;4&lt;/Key&gt;&#xd;
+    &lt;Value&gt;2&lt;/Value&gt;&#xd;
+  &lt;/FilterList&gt;&#xd;
+&#xd;
+&#xd;
+&#xd;
+ &#xd;
+&lt;LabelStatisticList xmlns=&quot;http://soa.ctrip.com/frt/product/xresource/v1&quot;&gt;4&lt;/LabelStatisticList&gt;&#xd;
+&#xd;
+  &lt;head xmlns=&quot;http://soa.ctrip.com/frt/product/xresource/v1&quot;&gt;&#xd;
+    &lt;syscode xmlns=&quot;http://soa.ctrip.com/mobile/common/types/v1&quot;&gt;String&lt;/syscode&gt;&#xd;
+    &lt;lang xmlns=&quot;http://soa.ctrip.com/mobile/common/types/v1&quot;&gt;String&lt;/lang&gt;&#xd;
+    &lt;auth xmlns=&quot;http://soa.ctrip.com/mobile/common/types/v1&quot;&gt;String&lt;/auth&gt;&#xd;
+    &lt;cid xmlns=&quot;http://soa.ctrip.com/mobile/common/types/v1&quot;&gt;String&lt;/cid&gt;&#xd;
+    &lt;ctok xmlns=&quot;http://soa.ctrip.com/mobile/common/types/v1&quot;&gt;String&lt;/ctok&gt;&#xd;
+    &lt;cver xmlns=&quot;http://soa.ctrip.com/mobile/common/types/v1&quot;&gt;String&lt;/cver&gt;&#xd;
+    &lt;sid xmlns=&quot;http://soa.ctrip.com/mobile/common/types/v1&quot;&gt;String&lt;/sid&gt;&#xd;
+    &lt;extension xmlns=&quot;http://soa.ctrip.com/mobile/common/types/v1&quot;&gt;&#xd;
+      &lt;name&gt;isupdatecount&lt;/name&gt;&#xd;
+      &lt;value&gt;true&lt;/value&gt;&#xd;
+    &lt;/extension&gt;&#xd;
+    &lt;pauth xmlns=&quot;http://soa.ctrip.com/mobile/common/types/v1&quot;&gt;String&lt;/pauth&gt;&#xd;
+    &lt;sauth xmlns=&quot;http://soa.ctrip.com/mobile/common/types/v1&quot;&gt;String&lt;/sauth&gt;&#xd;
+  &lt;/head&gt;&#xd;
+&lt;/ScenicSpotSearchRequest&gt;</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">ws.shopping.frt.fat96.qa.nt.ctripcorp.com</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/frt-newshopping-engine-ws/api/recommend/xml/ScenicSpotSearch</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings"/>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">2</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Postman-Token" elementType="Header">
+                  <stringProp name="Header.name">Postman-Token</stringProp>
+                  <stringProp name="Header.value">04b0bea7-f09e-4284-9201-7685b70ccf2e</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/xml</stringProp>
+                </elementProp>
+                <elementProp name="cache-control" elementType="Header">
+                  <stringProp name="Header.name">cache-control</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+                <elementProp name="accept-encoding" elementType="Header">
+                  <stringProp name="Header.name">accept-encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">PostmanRuntime/6.4.1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="ActivitySearch" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+	&quot;Version&quot;: 7090,&#xd;
+	&quot;Channel&quot;: &quot;H5&quot;,&#xd;
+	&quot;ShoppingId&quot;: &quot;d57b3021aea34235961a1fc477bc73e5&quot;,&#xd;
+	&quot;Keyword&quot;: &quot;&quot;,&#xd;
+	&quot;ImageSize&quot;: &quot;C_320_240&quot;,&#xd;
+	&quot;Sort&quot;: 5,&#xd;
+	&quot;Pager&quot;: {&#xd;
+		&quot;PageSize&quot;: 20,&#xd;
+		&quot;PageIndex&quot;: 0&#xd;
+	},&#xd;
+	&quot;FilterList&quot;: [{&#xd;
+		&quot;Type&quot;: 20,&#xd;
+		&quot;text&quot;:1&#xd;
+	}],&#xd;
+	&quot;FacetTypeList&quot;: [1,20],&#xd;
+	&quot;CustomerCategoryIdList&quot;: [1,2,3,4],&#xd;
+	&quot;head&quot;: {&#xd;
+		&quot;syscode&quot;: &quot;String&quot;,&#xd;
+		&quot;lang&quot;: &quot;String&quot;,&#xd;
+		&quot;auth&quot;: &quot;String&quot;,&#xd;
+		&quot;cid&quot;: &quot;String&quot;,&#xd;
+		&quot;ctok&quot;: &quot;String&quot;,&#xd;
+		&quot;cver&quot;: &quot;String&quot;,&#xd;
+		&quot;sid&quot;: &quot;String&quot;,&#xd;
+		&quot;extension&quot;: [{&#xd;
+			&quot;name&quot;: &quot;isupdatecount&quot;,&#xd;
+			&quot;value&quot;: &quot;true&quot;&#xd;
+		}],&#xd;
+		&quot;pauth&quot;: &quot;String&quot;,&#xd;
+		&quot;sauth&quot;: &quot;String&quot;&#xd;
+	}&#xd;
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">ws.shopping.frt.fat96.qa.nt.ctripcorp.com</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/frt-newshopping-engine-ws/api/recommend/json/ActivitySearch</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings"/>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">2</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Postman-Token" elementType="Header">
+                  <stringProp name="Header.name">Postman-Token</stringProp>
+                  <stringProp name="Header.value">e19381e6-15d5-4545-b4a2-927eec9613b4</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="cache-control" elementType="Header">
+                  <stringProp name="Header.name">cache-control</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+                <elementProp name="accept-encoding" elementType="Header">
+                  <stringProp name="Header.name">accept-encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">PostmanRuntime/6.4.1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="TrainSearch" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&#xd;
+	&quot;Version&quot;: 7080,&#xd;
+	&quot;Channel&quot;: &quot;H5&quot;,&#xd;
+	&quot;ShoppingId&quot;: &quot;9d4112a5baa140a9a766ebc5af7de3f4&quot;,&#xd;
+&#xd;
+	&quot;TrainSearchList&quot;: [{&#xd;
+		&quot;SegmentId&quot;: 1,&#xd;
+		&quot;Train&quot;:{&#xd;
+			&quot;DepartCityId&quot;:2,&#xd;
+			&quot;ArriveCityId&quot;:14,&#xd;
+			&quot;FromStationName&quot;: &quot;&quot;,&#xd;
+            &quot;ToStationName&quot;: &quot;&quot;,&#xd;
+			&quot;DepartDate&quot;: &quot;2017-11-30&quot;&#xd;
+		},&#xd;
+		&quot;TokenSearch&quot;: {&#xd;
+			&quot;IsRecommend&quot;: false,&#xd;
+			&quot;Token&quot;: &quot;&quot;&#xd;
+		},&#xd;
+		&quot;ActionType&quot;:1&#xd;
+	},{&#xd;
+		&quot;SegmentId&quot;: 2,&#xd;
+		&quot;Train&quot;:{&#xd;
+			&quot;DepartCityId&quot;:1,&#xd;
+			&quot;ArriveCityId&quot;:2,&#xd;
+			&quot;FromStationName&quot;: &quot;å&#x8c;&#x97;äº¬&quot;,&#xd;
+            &quot;ToStationName&quot;: &quot;ä¸&#x8a;æµ·&quot;,&#xd;
+			&quot;DepartDate&quot;: &quot;2017-11-30&quot;&#xd;
+		},&#xd;
+		&quot;TokenSearch&quot;: {&#xd;
+			&quot;IsRecommend&quot;: false,&#xd;
+			&quot;Token&quot;: &quot;&quot;&#xd;
+		},&#xd;
+	&quot;ActionType&quot;:1&#xd;
+	}]&#xd;
+} </stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">ws.shopping.frt.fat96.qa.nt.ctripcorp.com</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/frt-newshopping-engine-ws/api/recommend/json/TrainSearch</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings"/>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">2</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Postman-Token" elementType="Header">
+                  <stringProp name="Header.name">Postman-Token</stringProp>
+                  <stringProp name="Header.value">b408df69-6ac3-4f85-a8fd-4221906fa7f3</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="cache-control" elementType="Header">
+                  <stringProp name="Header.name">cache-control</stringProp>
+                  <stringProp name="Header.value">no-cache</stringProp>
+                </elementProp>
+                <elementProp name="accept-encoding" elementType="Header">
+                  <stringProp name="Header.name">accept-encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">PostmanRuntime/6.4.1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Simple Controller" enabled="false"/>
+        <hashTree/>
+        <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+    <WorkBench guiclass="WorkBenchGui" testclass="WorkBench" testname="WorkBench" enabled="true">
+      <boolProp name="WorkBench.save">true</boolProp>
+    </WorkBench>
+    <hashTree>
+      <ProxyControl guiclass="ProxyControlGui" testclass="ProxyControl" testname="HTTP(S) Test Script Recorder" enabled="true">
+        <stringProp name="ProxyControlGui.port">8082</stringProp>
+        <collectionProp name="ProxyControlGui.exclude_list"/>
+        <collectionProp name="ProxyControlGui.include_list"/>
+        <boolProp name="ProxyControlGui.capture_http_headers">true</boolProp>
+        <intProp name="ProxyControlGui.grouping_mode">0</intProp>
+        <boolProp name="ProxyControlGui.add_assertion">true</boolProp>
+        <stringProp name="ProxyControlGui.sampler_type_name"></stringProp>
+        <boolProp name="ProxyControlGui.sampler_redirect_automatically">false</boolProp>
+        <boolProp name="ProxyControlGui.sampler_follow_redirects">true</boolProp>
+        <boolProp name="ProxyControlGui.use_keepalive">true</boolProp>
+        <boolProp name="ProxyControlGui.sampler_download_images">false</boolProp>
+        <stringProp name="ProxyControlGui.proxy_prefix_http_sampler_name"></stringProp>
+        <stringProp name="ProxyControlGui.proxy_pause_http_sampler"></stringProp>
+        <boolProp name="ProxyControlGui.notify_child_sl_filtered">true</boolProp>
+        <boolProp name="ProxyControlGui.regex_match">false</boolProp>
+        <stringProp name="ProxyControlGui.content_type_include"></stringProp>
+        <stringProp name="ProxyControlGui.content_type_exclude"></stringProp>
+      </ProxyControl>
+      <hashTree/>
+      <HttpMirrorControl guiclass="HttpMirrorControlGui" testclass="HttpMirrorControl" testname="HTTP Mirror Server" enabled="true">
+        <stringProp name="HttpMirrorControlGui.port">8081</stringProp>
+        <stringProp name="HttpMirrorControlGui.maxPoolSize">1</stringProp>
+        <stringProp name="HttpMirrorControlGui.maxQueueSize">25</stringProp>
+      </HttpMirrorControl>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

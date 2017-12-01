@@ -142,8 +142,28 @@ def do():
     print input_file, output_file
 
 
+def get_jmx():
+    jmx_file = []
+    script_jmx = ''
+    _this_dir = os.path.dirname(os.path.abspath(__file__))
+    l = os.listdir(_this_dir)
+    for i in l:
+        if os.path.splitext(i)[1] == '.jmx':
+            jmx_file.append(i)
+    print jmx_file
+    if len(jmx_file) >1:
+        i = input(u"选择文件(1,2,3):")
+        script_jmx = jmx_file[i-1]
+    print script_jmx
+    return script_jmx
+
 if __name__ == '__main__':
-    multi()
+    s = '中国'
+    print s.decode('utf8').encode('gb2312')
+    get_jmx()
+
+
+        # multi()
     # xml = open("D:\\Users\\fanp\\Desktop\\test_script.jmx", 'r').read()
     # result = Xml2Json(xml).result
     # print result

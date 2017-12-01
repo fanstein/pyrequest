@@ -27,7 +27,6 @@ ip = ''
 request_text = ''
 currpath = os.path.dirname(os.path.realpath(__file__))
 # JmxFileName = "D:\\Users\\fanp\\Desktop\\jp@gc - Dummy Sampler.jmx"
-JmxFileName = "test_script.jmx"
 JMETER_Home = "D:\\apache-jmeter-3.3\\bin\\jmeter.bat"
 path = 'PerformanceTest'
 env.hosts = ['10.3.6.15']
@@ -35,6 +34,8 @@ env.user = 'root'  # 多台主机用户名密码相同可以只写一次
 env.password = '123.Ctrip'
 env.warn_only = True
 
+reload(sys)
+sys.setdefaultencoding('utf8')
 
 class BaseFunc(object):
     @staticmethod
@@ -49,6 +50,7 @@ class BaseFunc(object):
         print "stderrinfo " + stderrinfo
         print "stdoutinfo " + stdoutinfo
         print "returncode={0}".format(output.returncode)
+
 
 
 # 监控
@@ -157,10 +159,11 @@ class runJmeter(object):
         '''
         获取当前日期时间，格式'08085159'
         '''
-        return time.strftime(r'%d%H%M%S', time.localtime(time.time()))
+        return time.strftime(r'%m%d-%H%M%S', time.localtime(time.time()))
 
     @staticmethod
-    def execjmxs(Num_Threads, duration=600):
+    def execjmxs(JmxFileName, Num_Threads, duration=600):
+        print u'开始执行jmeter'
         runJmeter.mkdir()
         with open(JmxFileName, "r") as f:
             tmpstr = Template(f.read()).safe_substitute(
@@ -198,12 +201,31 @@ class runJmeter(object):
                 else:
                     raise
 
+
 # 获取jmeter脚本信息
 class GetInfo(object):
+    def get_script(self):
+        jmx_file = []
+        script_jmx = ''
+        _this_dir = os.path.dirname(os.path.abspath(__file__))
+        l = os.listdir(_this_dir)
+        for i in l:
+            if os.path.splitext(i)[1] == '.jmx':
+                jmx_file.append(i)
+        print jmx_file
+        if len(jmx_file) > 1:
+            i = input(u"choose script(1,2,3):")
+            script_jmx = jmx_file[i - 1]
+        else:
+            script_jmx = jmx_file[0]
+        print script_jmx
+        return script_jmx
+
     def get_request(self):
+        JmxFileName = self.get_script()
         info = {}
         fo = open(JmxFileName, "r")
-        script = fo.read().decode("utf8").encode("GB2312")
+        script = fo.read()
         soup = BeautifulSoup(script, "xml")
         try:
             ip = soup.HTTPSamplerProxy.find("stringProp", attrs={"name": "HTTPSampler.domain"}).text
@@ -225,7 +247,7 @@ class GetInfo(object):
         else:
             print u"接口ip:" + ip
             print u"报文:" + request_text
-            info = {'ip': ip, "request": request_text}
+            info = {'ip': ip, "request": request_text, "script": JmxFileName}
             return info
 
 
@@ -311,16 +333,19 @@ class Parse(object):
 
 # 命令使用解释
 def usage():
+    time.sleep(10)
+    print "usersssssssssss"
     pass
 
 
 def do():
-    opts, args = getopt.getopt(sys.argv[1:], "hr:t:u:s:d:", ["version", "file"])
+    opts, args = getopt.getopt(sys.argv[1:], "hrmt:u:s:d:f:", ["version", "file"])
     output_dir = ""
     duration = ""
     user = []
     sever_o = False
     exec_test = False
+    monitor_if = False
     for op, value in opts:
         if op == "-r":
             exec_test = True
@@ -334,28 +359,38 @@ def do():
             usage()
         elif op == "-f":
             output_dir = value
+        elif op == "-m":
+            monitor_if = True
         elif op == "-s":
             print "server start port 8787"
             sever_o = True
         elif op == "--version":
             print "version 1.0"
             sys.exit()
-    if sever_o:
-        BaseFunc.execcmd("python -m SimpleHTTPServer 8787")
+
+
+    print exec_test
+    print duration
+    print user
 
     if exec_test:
         info = GetInfo().get_request()
         start_time = time.time()
-        end_time = start_time + duration
-
+        print u"运行时长:"
+        print duration
+        end_time = start_time + int(duration)
+        jmx_script = info["script"]
         for thread in user:
             p = multiprocessing.Pool(4)
             # 执行测试
-            p.apply_async(runJmeter.execjmxs, args=(thread, duration))
-            # 部署性能监控服务
-            p.apply_async(BaseFunc.execcmd, args=('fab -f manage.py deploy',))
-            # 监控
-            p.apply_async(Monitor(remote_ip=info['ip'], port=4444, end_time=end_time).start, )
+            p.apply_async(runJmeter.execjmxs(jmx_script, int(thread), int(duration)))
+            if sever_o:
+                BaseFunc.execcmd("python -m SimpleHTTPServer 8787")
+            if monitor_if:
+                # 部署性能监控服务
+                p.apply_async(BaseFunc.execcmd, args=('fab -f manage.py deploy',))
+                # 监控
+                p.apply_async(Monitor(remote_ip=info['ip'], port=4444, end_time=end_time).start, )
             p.close()
             p.join()
             print str(thread) + "all over"
