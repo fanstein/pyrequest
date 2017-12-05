@@ -157,28 +157,68 @@ def get_jmx():
     print script_jmx
     return script_jmx
 
+
+def generator_function():
+    for i in range(10):
+        yield i
+
+
+def fibon(n):
+    a = b = 1
+    for i in range(n):
+        yield a
+        a, b = b, a + b
+
+from functools import wraps
+
+class logit(object):
+    def __init__(self, logfile='out.log'):
+        self.logfile = logfile
+
+    def __call__(self, func):
+        @wraps(func)
+        def wrapped_function(*args, **kwargs):
+            log_string = func.__name__ + " was called"
+            print(log_string)
+            # 打开logfile并写入
+            with open(self.logfile, 'a') as opened_file:
+                # 现在将日志打到指定的文件
+                opened_file.write(log_string + '\n')
+            # 现在，发送一个通知
+            self.notify()
+            return func(*args, **kwargs)
+        return wrapped_function
+
+    def notify(self):
+        # logit只打日志，不做别的
+        pass
+
+def lazy_sum(*args):
+    def sum():
+        ax = 0
+        for n in args:
+            ax = ax + n
+        return ax
+    return sum
+
+def test():
+    return 'hh'
+
+@logit()
+def myfunc1():
+    pass
+
+
+# 外汇储备
 if __name__ == '__main__':
-    s = '中国'
-    print s.decode('utf8').encode('gb2312')
-    get_jmx()
+    l1 = [-1,-2,3,4]
+    l = [x+1 for x in l1 if x >2]
+    from pprint import pprint
 
+    import urllib2
 
-        # multi()
-    # xml = open("D:\\Users\\fanp\\Desktop\\test_script.jmx", 'r').read()
-    # result = Xml2Json(xml).result
-    # print result
-    # outputfile = open("京东手机列表_1.json", 'w', encoding='UTF-8')
-    # outputfile.write(str(result))
-    # outputfile.close()
-    # start = time.time()
-    # print start
-    # constant = 5
-    # end = start + constant
-    # print end
-    # while time.time() <= end:
-    #     print time.time()
-    #     time.sleep(1)
-
+    response = urllib2.urlopen("http://www.baidu.com")
+    print response.read()
 
 
 

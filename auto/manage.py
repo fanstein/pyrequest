@@ -23,12 +23,9 @@ import multiprocessing
 
 _this_dir = os.path.dirname(os.path.abspath(__file__))
 
-ip = ''
-request_text = ''
-currpath = os.path.dirname(os.path.realpath(__file__))
-# JmxFileName = "D:\\Users\\fanp\\Desktop\\jp@gc - Dummy Sampler.jmx"
+
 JMETER_Home = "D:\\apache-jmeter-3.3\\bin\\jmeter.bat"
-path = 'PerformanceTest'
+
 env.hosts = ['10.3.6.15']
 env.user = 'root'  # 多台主机用户名密码相同可以只写一次
 env.password = '123.Ctrip'
@@ -37,21 +34,24 @@ env.warn_only = True
 reload(sys)
 sys.setdefaultencoding('utf8')
 
+
 class BaseFunc(object):
     @staticmethod
     def execcmd(command):
         print "command " + command
-
         output = subprocess.Popen(
             command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True,
             universal_newlines=True)
-
         stderrinfo, stdoutinfo = output.communicate()
-        print "stderrinfo " + stderrinfo
-        print "stdoutinfo " + stdoutinfo
-        print "returncode={0}".format(output.returncode)
+        # print "stderrinfo " + stderrinfo
+        # print "stdoutinfo " + stdoutinfo
+        # print "returncode={0}".format(output.returncode)
+        return output.returncode
 
-
+    def server_start(self, cmd):
+        returnCode = self.execcmd(command=cmd)
+        if returnCode == 1:
+            print u"8787 Address already in use"
 
 # 监控
 class Monitor(object):
@@ -154,6 +154,7 @@ instance = Fab()
 
 # 执行jmeter
 class runJmeter(object):
+    path = 'PerformanceTest'
     @staticmethod
     def getDateTime():
         '''
@@ -171,11 +172,11 @@ class runJmeter(object):
                 duration=duration
             )
         now = runJmeter.getDateTime()
-        tmpjmxfile = os.path.join(currpath, path) + "/script/{0}U_{1}.jmx".format(Num_Threads, now)
+        tmpjmxfile = os.path.join(_this_dir, path) + "/script/{0}U_{1}.jmx".format(Num_Threads, now)
         with open(tmpjmxfile, "w+") as file:
             file.writelines(tmpstr)
-        csvfilename = os.path.join(currpath, path) + "/result/{0}.csv".format(now)
-        htmlreportpath = os.path.join(currpath, path) + "/result/report_{0}".format(now)
+        csvfilename = os.path.join(_this_dir, path) + "/result/{0}.csv".format(now)
+        htmlreportpath = os.path.join(_this_dir, path) + "/result/report_{0}".format(now)
         if not os.path.exists(htmlreportpath):
             os.makedirs(htmlreportpath)
         if platform.system().lower() == 'windows':
@@ -333,19 +334,28 @@ class Parse(object):
 
 # 命令使用解释
 def usage():
-    time.sleep(10)
-    print "usersssssssssss"
-    pass
+    print '###################################'
+    print '-r 不需要加参数,执行性能测试'
+    print '-h 帮助'
+    print '-m 监控服务器资源(linux)，如果服务器在参数文件中，则需要在文件中配置，否则自动获取'
+    print '-t 执行时长'
+    print '-u 执行用户数,多用户:5,10,15'
+    print '-s 启动本地服务'
+    print '-d '
+    print '-f 输出目录,默认是当前目录'
+    print '-a 分析'
+    print '###################################'
 
 
 def do():
-    opts, args = getopt.getopt(sys.argv[1:], "hrmt:u:s:d:f:", ["version", "file"])
+    opts, args = getopt.getopt(sys.argv[1:], "ahrmt:u:s:d:f:", ["version", "file"])
     output_dir = ""
     duration = ""
     user = []
     sever_o = False
     exec_test = False
     monitor_if = False
+    analyse = False
     for op, value in opts:
         if op == "-r":
             exec_test = True
@@ -364,28 +374,26 @@ def do():
         elif op == "-s":
             print "server start port 8787"
             sever_o = True
+        elif op == '-a':
+            analyse = True
         elif op == "--version":
             print "version 1.0"
             sys.exit()
 
-
-    print exec_test
-    print duration
-    print user
+    print u'执行时长:' + duration
+    print u'执行用户' + ''.join(user)
 
     if exec_test:
         info = GetInfo().get_request()
         start_time = time.time()
-        print u"运行时长:"
-        print duration
         end_time = start_time + int(duration)
         jmx_script = info["script"]
         for thread in user:
-            p = multiprocessing.Pool(4)
+            p = multiprocessing.Pool(5)
             # 执行测试
             p.apply_async(runJmeter.execjmxs(jmx_script, int(thread), int(duration)))
             if sever_o:
-                BaseFunc.execcmd("python -m SimpleHTTPServer 8787")
+                p.apply_async(BaseFunc().server_start("python -m SimpleHTTPServer 8787"))
             if monitor_if:
                 # 部署性能监控服务
                 p.apply_async(BaseFunc.execcmd, args=('fab -f manage.py deploy',))
@@ -393,11 +401,12 @@ def do():
                 p.apply_async(Monitor(remote_ip=info['ip'], port=4444, end_time=end_time).start, )
             p.close()
             p.join()
-            print str(thread) + "all over"
-            print duration
-    else:
+            print str(thread) + u"测试结束"
+    if analyse:
         Parse().csv_parse()
 
 
 if __name__ == '__main__':
     do()
+
+
